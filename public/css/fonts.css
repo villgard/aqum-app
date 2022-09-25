@@ -1,0 +1,41 @@
+@font-face {
+    font-family: 'Gotham Bold';
+    src: url(../fonts/Gotham/Gotham-Bold.woff2);
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gotham Book';
+    src: url(../fonts/Gotham/Gotham-Book.woff2);
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gotham Medium';
+    src: url(../fonts/Gotham/Gotham-Medium.woff2);
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins Medium';
+    src: url(../fonts/Poppins/Poppins-Medium.woff2);
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins Regular';
+    src: url(../fonts/Poppins/Poppins-Regular.woff2);
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins SemiBold';
+    src: url(../fonts/Poppins/Poppins-SemiBold.woff2);
+    font-weight: 600;
+    font-display: swap;
+}

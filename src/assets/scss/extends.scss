@@ -1,0 +1,31 @@
+%background-cover {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+%background-contain {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+%flex-start {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+%flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+%flex-end {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+%flex-space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

@@ -1,0 +1,131 @@
+@mixin h1 {
+  font-weight: 500;
+  font-size: 54px;
+  line-height: 65px;
+}
+
+@mixin h1-sec {
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 41px;
+}
+
+@mixin h2 {
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 41px;
+}
+
+@mixin h3 {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 26px;
+}
+
+@mixin h4 {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 120%;
+}
+
+@mixin h5 {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+}
+
+@mixin button-medium {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+@mixin button-regular {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@mixin p-subtitle-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@mixin p-subtitle-text-2 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+}
+
+@mixin input-hint {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+@mixin price-title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 130%;
+}
+
+@mixin price-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+
+@mixin stat-num {
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 41px;
+}
+
+@mixin stat-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+@mixin slide-num {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 38px;
+}
+
+@mixin menu-link {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+@mixin terms-text {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+@mixin footer-text {
+  font-size: 12px;
+  line-height: 130%;
+}
+
+@mixin faq-theme {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 120%;
+}
+
+@mixin download-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+@mixin api-tab-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
