@@ -13,6 +13,7 @@
   display: block;
   width: 128px;
   height: 55px;
+
   img {
     width: 100%;
     height: 100%;
