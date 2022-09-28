@@ -1,5 +1,6 @@
 import {createRouter, createWebHistory} from "vue-router";
 import Index from '../views/index.vue';
+import Privacy from '../views/privacy.vue';
 
 const routes = [
     {
@@ -26,6 +27,11 @@ const routes = [
         name: 'support',
         path: '/support',
         component: Index,
+    },
+    {
+        name: 'privacy',
+        path: '/privacy',
+        component: Privacy,
     },
 ];
 

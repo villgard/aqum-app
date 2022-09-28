@@ -1,61 +1,52 @@
+@mixin t($fs, $lh: 1, $wf: 400, $ls: 0) {
+  font-size: #{$fs}px;
+  @if($lh == #{$lh}) {
+    line-height: $lh;
+  } @else {
+    line-height: #{$lh}px;
+  }
+  font-weight: $wf;
+  letter-spacing: #{$ls}px;
+}
+
 @mixin h1 {
-  font-weight: 500;
-  font-size: 54px;
-  line-height: 65px;
+  @include t(54, 65, 500);
 }
 
 @mixin h1-sec {
-  font-weight: 700;
-  font-size: 34px;
-  line-height: 41px;
+  @include t(34, 41, 700);
 }
 
 @mixin h2 {
-  font-weight: 500;
-  font-size: 34px;
-  line-height: 41px;
+  @include t(34, 41, 500);
 }
 
 @mixin h3 {
-  font-weight: 700;
-  font-size: 22px;
-  line-height: 26px;
+  @include t(22, 26, 700);
 }
 
 @mixin h4 {
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 120%;
+  @include t(18, 120%, 500);
 }
 
 @mixin h5 {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 130%;
+  @include t(16, 130%, 500);
 }
 
 @mixin button-medium {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 22px;
+  @include t(14, 22, 500);
 }
 
 @mixin button-regular {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
+  @include t(16, 24);
 }
 
 @mixin p-subtitle-text {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
+  @include t(16, 24);
 }
 
 @mixin p-subtitle-text-2 {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 130%;
+  @include t(16, 130%);
 }
 
 @mixin input-hint {
@@ -108,7 +99,14 @@
 }
 
 @mixin footer-text {
+  font-weight: 400;
   font-size: 12px;
+  line-height: 130%;
+}
+
+@mixin footer-list-title {
+  font-weight: 500;
+  font-size: 16px;
   line-height: 130%;
 }
 
@@ -128,4 +126,16 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
+}
+
+@mixin quote {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+@mixin card-title {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
 }
