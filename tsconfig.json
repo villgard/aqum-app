@@ -21,8 +21,8 @@
       "@/*": ["/src/*"],
       "~/*": ["./*"]
     },
-    "types": ["@types/node", "webpack-env", "vite/client", "vite-svg-loader"]
+    "types": ["@types/node", "webpack-env", "vite/client"]
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue", "tests/**/*.ts", "tests/**/*.tsx"],
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"],
   "exclude": ["node_modules"]
 }

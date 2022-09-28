@@ -34,7 +34,7 @@ declare module '@vue/runtime-core' {
     Heading: typeof import('./src/components/Legal/Heading.vue')['default']
     Legal: typeof import('./src/components/Legal/index.vue')['default']
     List: typeof import('./src/components/Footer/List.vue')['default']
-    Logo: typeof import('./src/components/Logo/index.vue')['default']
+    Logo: typeof import('./src/components/Icons/Logo.vue')['default']
     MainScreen: typeof import('./src/components/Landing/MainScreen.vue')['default']
     Menu: typeof import('./src/components/Footer/Menu.vue')['default']
     MobileAppBanner: typeof import('./src/components/Landing/MobileAppBanner.vue')['default']
