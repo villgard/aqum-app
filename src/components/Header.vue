@@ -15,9 +15,11 @@
         <a-col :span="6">
           <a-row gap="26" justify="end" align="middle" :class="$style.tools">
             <LanguageSelector />
-            <a-button shape="round">
-              {{ t('button') }}
-            </a-button>
+            <router-link to="registration">
+              <a-button shape="round">
+                {{ t('button') }}
+              </a-button>
+            </router-link>
           </a-row>
         </a-col>
       </a-row>

@@ -9,6 +9,7 @@ declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     AAvatar: typeof import('ant-design-vue/es')['Avatar']
     AButton: typeof import('ant-design-vue/es')['Button']
+    ACard: typeof import('ant-design-vue/es')['Card']
     ACol: typeof import('ant-design-vue/es')['Col']
     ADivider: typeof import('ant-design-vue/es')['Divider']
     ADropdown: typeof import('ant-design-vue/es')['Dropdown']
@@ -23,6 +24,7 @@ declare module '@vue/runtime-core' {
     ASubMenu: typeof import('ant-design-vue/es')['SubMenu']
     ATabPane: typeof import('ant-design-vue/es')['TabPane']
     ATabs: typeof import('ant-design-vue/es')['Tabs']
+    Card: typeof import('./src/components/Card/Card.vue')['default']
     Container: typeof import('./src/components/Common/Container.vue')['default']
     Desktop: typeof import('./src/components/Header/Desktop/index.vue')['default']
     DownloadBanner: typeof import('./src/components/Landing/DownloadBanner.vue')['default']
@@ -42,6 +44,7 @@ declare module '@vue/runtime-core' {
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     SecondScreen: typeof import('./src/components/Landing/SecondScreen.vue')['default']
+    SignUp: typeof import('./src/components/Auth/SignUp.vue')['default']
     Statistic: typeof import('./src/components/Landing/Statistic.vue')['default']
   }
 }
