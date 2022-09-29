@@ -1,67 +1,53 @@
 <template>
-  <footer class="footer">
-    <div class="footer__content container">
-      <div class="footer__content-row">
-        <div class="footer__content-info">
+  <a-layout-footer>
+    <Container>
+      <a-row>
+        <a-col :span="6">
           <Logo />
-          <p class="footer__content-info--text">
-            {{ t('footer.text') }}
-          </p>
-        </div>
-        <FooterMenu />
-      </div>
-      <a-divider class="footer__content-divider"/>
-      <p class="footer__content-copyright">
+          <div :class="$style.text">
+            {{ t('text') }}
+          </div>
+        </a-col>
+        <a-col :span="18">
+          <a-row justify="end">
+            <FooterMenu />
+          </a-row>
+        </a-col>
+      </a-row>
+      <div :class="$style.divider" />
+      <div :class="$style.copyright">
         © 2022 Nero | All Rights Reserved
-      </p>
-    </div>
-  </footer>
+      </div>
+    </Container>
+  </a-layout-footer>
 </template>
 
 <script setup>
-import { useI18n } from "vue-i18n";
+import Container from '@/components/Common/Container.vue';
+import Logo from '@/components/Logo.vue';
 import FooterMenu from './Menu.vue';
+import { useI18N } from '@/hooks/useI18N';
 
-const { t } = useI18n();
-
+const { t } = useI18N('footer');
 </script>
 
-<style lang="scss">
-@import "/src/assets/scss/utils.scss";
+<style lang="scss" module>
+.text {
+  max-width: 230px;
+  font-size: 12px;
+  color: rgba(67, 67, 67, 0.8);
+}
 
-.footer {
-  padding-top: 25px;
+.divider {
   width: 100%;
-  &__content {
+  height: 1px;
+  margin: 20px 0;
+  background: rgba(67, 67, 67, 0.15);
+}
 
-    &-row {
-      display: flex;
-      justify-content: space-between;
-    }
-    &-info {
-
-      &--text {
-        width: 205px;
-        margin: 2px 0 0;
-        font-family: 'Gotham Book', sans-serif;
-        @include footer-text;
-        color: var(--dark-1);
-        opacity: .8;
-      }
-    }
-    &-copyright {
-      min-width: 100%;
-      font-family: 'Gotham Book', sans-serif;
-      @include footer-text;
-      color: var(--dark-1);
-      opacity: .4;
-      margin-bottom: 25px;
-    }
-    .ant-divider-horizontal {
-      width: 100%;
-      margin: 19px 0;
-      border-top: 1px solid rgba(67, 67, 67, 0.15);
-    }
-  }
+.copyright {
+  padding: 0 0 40px 0;
+  font-size: 12px;
+  color: rgba(67, 67, 67, 0.4);
 }
 </style>

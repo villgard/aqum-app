@@ -4,9 +4,7 @@
     <a-layout-content>
       <RouterView />
     </a-layout-content>
-    <a-layout-footer>
-      <Footer />
-    </a-layout-footer>
+    <Footer />
   </a-layout>
 </template>
 
@@ -44,7 +42,7 @@ function getVisualViewportHeight() {
 }
 
 html {
-  font: 16px var(--font);
+  font: 16px/1.3 var(--font);
 }
 
 .ant-layout {
