@@ -1,20 +1,22 @@
 <template>
-  <header class="header">
+  <a-layout-header>
+    
+  </a-layout-header>
+  <header :class="$style.header">
     <div class="header__content container">
       <Logo />
       <Menu />
-      <div style="width: 230px;"></div>
+      <div style="width: 230px"></div>
     </div>
   </header>
 </template>
 
 <script setup>
-import Menu from '../../Menu/index.vue';
-
+import Menu from '@/components/Menu.vue';
 </script>
 
-<style lang="scss">
-@import "src/assets/scss/utils.scss";
+<style lang="scss" module>
+@import 'src/assets/scss/utils.scss';
 
 .header {
   height: 68px;
