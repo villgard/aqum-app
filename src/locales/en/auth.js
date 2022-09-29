@@ -16,4 +16,11 @@ export default {
       footerButton: 'Log in',
     },
   },
+  confirmAccount: {
+    title: 'Confirm your accont',
+    caption: "We sent a verification link to the email example@gmail.com. Click the link to verify your email. You may need to check your spam folder. Don't see it?",
+    resend: 'Resend link',
+    button: 'Home',
+    footerText: 'After you confirm the registration, use your Email and password to log in with <a href="{link}">AQUM Browser</a> client.',
+  }
 };

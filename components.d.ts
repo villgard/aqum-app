@@ -29,6 +29,7 @@ declare module '@vue/runtime-core' {
     ATabPane: typeof import('ant-design-vue/es')['TabPane']
     ATabs: typeof import('ant-design-vue/es')['Tabs']
     Card: typeof import('./src/components/Card/Card.vue')['default']
+    ConfirmAccount: typeof import('./src/components/Auth/ConfirmAccount/ConfirmAccount.vue')['default']
     Container: typeof import('./src/components/Common/Container.vue')['default']
     Desktop: typeof import('./src/components/Header/Desktop/index.vue')['default']
     DownloadBanner: typeof import('./src/components/Landing/DownloadBanner.vue')['default']

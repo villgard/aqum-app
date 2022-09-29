@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
 import { RouteAccess } from '@/common/enums';
 import Registration from '@/router/registration';
+import ConfirmAccount from '@/router/confirmAccount';
 
 declare module 'vue-router' {
   interface RouterMeta {
@@ -15,7 +16,8 @@ const routes: RouterRecordRaw[] = [
     path: '/',
     component: () => import('@/views/index.vue'),
   },
-  Registration, 
+  Registration,
+  ConfirmAccount,
   {
     name: 'pricing',
     path: '/pricing',

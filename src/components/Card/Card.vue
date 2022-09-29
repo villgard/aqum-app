@@ -1,18 +1,25 @@
 <template>
   <div :class="[$style.card, $style[size]]">
     <div v-if="title" :class="[$style.title, $style[titleAlign]]">{{ title }}</div>
-    <div v-if="caption" :class="$style.caption" v-html="caption"></div>
+    <div v-if="caption" :class="$style.caption" v-html="caption" />
+    
+    <div v-if="hasCaptionsSlot" :class="$style.caption">
+      <slot name="caption" />
+    </div>
     <slot name="body" />
   </div>
 </template>
 
 <script lang="ts" setup>
+import { computed, useSlots } from 'vue';
 import { type CardProps, CardSizes, CardTitleAlign } from './index';
 
+const slots = useSlots();
 const props = withDefaults(defineProps<CardProps>(), {
   size: 'default' as CardSizes,
   titleAlign: 'left' as CardTitleAlign,
 });
+const hasCaptionsSlot = computed<Boolean>(() => !!slots['caption']);
 </script>
 
 <style lang="scss" module>
