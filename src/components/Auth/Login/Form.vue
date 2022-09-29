@@ -8,22 +8,15 @@
       <a-input-password v-model:value="formState.password" />
     </a-form-item>
 
-    <a-form-item name="telegram">
-      <template #label>
-        <div v-html="t('form.telegram')" :class="$style.label" />
-      </template>
-      <a-input v-model:value="formState.telegram" />
-    </a-form-item>
-
     <a-form-item>
       <a-button block type="primary" shape="round" size="large" html-type="submit">
-        {{ t("signUp.form.button") }}
+        {{ t("login.form.button") }}
       </a-button>
     </a-form-item>
 
-    <div :class="$style.else">
-      {{ t("signUp.form.footerText") }}
-      <router-link to="/login">{{ t("signUp.form.footerButton") }}</router-link>
+    <div :class="$style.footer">
+      <router-link to="/registration" :class="$style.signUp">{{ t("login.signUp") }}</router-link>
+      <router-link to="/recover-password">{{ t("login.recoverPassword") }}</router-link>
     </div>
   </a-form>
 </template>
@@ -36,14 +29,12 @@ import { useI18N } from '@/hooks/useI18N';
 interface FormState {
   email: string;
   password: string;
-  telegram: string;
 };
 
 const { t } = useI18N('auth');
 const formState: UnwrapRef<FormState> = reactive({
   email: '',
   password: '',
-  telegram: '',
 });
 
 const checkPassword = (_: any, value) => {
@@ -68,8 +59,15 @@ const checkPassword = (_: any, value) => {
   }
 }
 
-.else {
-  text-align: center;
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 16px;
+  font-size: 16px;
+}
+
+.signUp {
   color: #8C8C8C;
 }
 </style>

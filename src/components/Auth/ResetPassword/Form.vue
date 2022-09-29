@@ -1,30 +1,18 @@
 <template>
   <a-form :class="$style.form" :model="formState" layout="vertical" @validate="ts">
-    <a-form-item :label="t('form.email')" name="email" :rules="[{ type: 'email', message: t('form.emailType') }, { required: true, message: t('form.emailRequired') }]">
-      <a-input v-model:value="formState.email" />
-    </a-form-item>
-
     <a-form-item :label="t('form.password')" name="password" :rules="[{ required: true, validator: checkPassword, message: t('form.passwordCaption') }]">
       <a-input-password v-model:value="formState.password" />
     </a-form-item>
 
-    <a-form-item name="telegram">
-      <template #label>
-        <div v-html="t('form.telegram')" :class="$style.label" />
-      </template>
-      <a-input v-model:value="formState.telegram" />
+    <a-form-item :label="t('form.repeatPassword')" name="repeatPassword" :rules="[{ required: true, validator: checkPassword, message: t('form.passwordCaption') }, { validator: isEqual, message: t('form.repeatPasswordError')}]">
+      <a-input-password v-model:value="formState.repeatPassword" />
     </a-form-item>
 
     <a-form-item>
       <a-button block type="primary" shape="round" size="large" html-type="submit">
-        {{ t("signUp.form.button") }}
+        {{ t("resetPassword.form.button") }}
       </a-button>
     </a-form-item>
-
-    <div :class="$style.else">
-      {{ t("signUp.form.footerText") }}
-      <router-link to="/login">{{ t("signUp.form.footerButton") }}</router-link>
-    </div>
   </a-form>
 </template>
 
@@ -34,20 +22,26 @@ import type { UnwrapRef } from 'vue';
 import { useI18N } from '@/hooks/useI18N';
 
 interface FormState {
-  email: string;
   password: string;
-  telegram: string;
+  repeatPassword: string;
 };
 
 const { t } = useI18N('auth');
 const formState: UnwrapRef<FormState> = reactive({
-  email: '',
   password: '',
-  telegram: '',
+  repeatPassword: '',
 });
 
 const checkPassword = (_: any, value) => {
   if(/[a-z]+/.test(value) && /[A-Z]+/.test(value) && /\d+/.test(value) && value.length >= 6) {
+    return Promise.resolve();
+  }
+
+  return Promise.reject();
+};
+
+const isEqual = (_: any, value) => {
+  if (value === formState.password) {
     return Promise.resolve();
   }
 
@@ -58,7 +52,7 @@ const checkPassword = (_: any, value) => {
 <style lang="scss" module>
 .form {
   width: 100%;
-  margin: 29px 0 0 0;
+  margin: 29px 0 -45px 0;
 }
 
 .label {
@@ -66,10 +60,5 @@ const checkPassword = (_: any, value) => {
   span {
     color: #8C8C8C;
   }
-}
-
-.else {
-  text-align: center;
-  color: #8C8C8C;
 }
 </style>

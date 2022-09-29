@@ -32,6 +32,7 @@ const hasCaptionsSlot = computed<Boolean>(() => !!slots['caption']);
     padding: 36px 44px 63px 44px;
 
     @media (min-width: 768px) {
+      width: 100%;
       max-width: 498px;
     }
   }

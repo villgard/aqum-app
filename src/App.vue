@@ -41,7 +41,7 @@ html {
 }
 
 .ant-layout {
-  min-height: var(--visual-viewport-height);
+  min-height: var(--visual-viewport-height) !important;
 }
 </style>
 

@@ -2,6 +2,10 @@ import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
 import { RouteAccess } from '@/common/enums';
 import Registration from '@/router/registration';
 import ConfirmAccount from '@/router/confirmAccount';
+import Login from '@/router/login';
+import RecoverPassword from '@/router/recoverPassword';
+import RecoverConfirm from '@/router/recoverConfirm';
+import ResetPassword from '@/router/resetPassword';
 
 declare module 'vue-router' {
   interface RouterMeta {
@@ -18,6 +22,10 @@ const routes: RouterRecordRaw[] = [
   },
   Registration,
   ConfirmAccount,
+  Login,
+  RecoverPassword,
+  RecoverConfirm,
+  ResetPassword,
   {
     name: 'pricing',
     path: '/pricing',
