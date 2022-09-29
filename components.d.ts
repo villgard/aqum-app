@@ -13,6 +13,10 @@ declare module '@vue/runtime-core' {
     ACol: typeof import('ant-design-vue/es')['Col']
     ADivider: typeof import('ant-design-vue/es')['Divider']
     ADropdown: typeof import('ant-design-vue/es')['Dropdown']
+    AForm: typeof import('ant-design-vue/es')['Form']
+    AFormItem: typeof import('ant-design-vue/es')['FormItem']
+    AInput: typeof import('ant-design-vue/es')['Input']
+    AInputPassword: typeof import('ant-design-vue/es')['InputPassword']
     ALayout: typeof import('ant-design-vue/es')['Layout']
     ALayoutContent: typeof import('ant-design-vue/es')['LayoutContent']
     ALayoutFooter: typeof import('ant-design-vue/es')['LayoutFooter']
@@ -31,6 +35,7 @@ declare module '@vue/runtime-core' {
     FAQ: typeof import('./src/components/FAQ/index.vue')['default']
     Features: typeof import('./src/components/Landing/Features/index.vue')['default']
     Footer: typeof import('./src/components/Footer/Footer.vue')['default']
+    Form: typeof import('./src/components/Auth/SignUp/Form.vue')['default']
     Header: typeof import('./src/components/Header.vue')['default']
     Heading: typeof import('./src/components/Legal/Heading.vue')['default']
     LanguageSelector: typeof import('./src/components/LanguageSelector.vue')['default']
@@ -44,7 +49,7 @@ declare module '@vue/runtime-core' {
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     SecondScreen: typeof import('./src/components/Landing/SecondScreen.vue')['default']
-    SignUp: typeof import('./src/components/Auth/SignUp.vue')['default']
+    SignUp: typeof import('./src/components/Auth/SignUp/SignUp.vue')['default']
     Statistic: typeof import('./src/components/Landing/Statistic.vue')['default']
   }
 }

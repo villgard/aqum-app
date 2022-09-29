@@ -5,8 +5,8 @@
 // // >>> Primary
 @primary-color: #508FF8;
 // @primary-color-hover: color(~`colorPalette('@{primary-color}', 5) `);
-// @primary-color-active: color(~`colorPalette('@{primary-color}', 7) `);
-// @primary-color-outline: fade(@primary-color, @outline-fade);
+@primary-color-active: @primary-color;
+@primary-color-outline: @primary-color;
 
 // @processing-color: @blue-6;
 
@@ -69,7 +69,7 @@
 // // Popover background color
 // @popover-background: @component-background;
 // @popover-customize-border-color: @border-color-split;
-// @font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+@font-family: 'Gotham', sans-serif;
 //   'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
 //   'Noto Color Emoji';
 // @code-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
@@ -200,8 +200,8 @@
 @btn-primary-shadow: none;
 @btn-text-shadow: none;
 
-// @btn-primary-color: #fff;
-// @btn-primary-bg: @primary-color;
+@btn-primary-color: #fff;
+@btn-primary-bg: @primary-color;
 
 @btn-default-color: #fff;
 @btn-default-bg: rgba(38, 38, 38, 0.6);
@@ -219,7 +219,7 @@
 // @btn-default-ghost-bg: transparent;
 // @btn-default-ghost-border: @component-background;
 
-// @btn-font-size-lg: @font-size-lg;
+@btn-font-size-lg: 16px;
 @btn-font-size: 14px;
 // @btn-font-size-sm: 14px;
 @btn-padding-horizontal-base: 33px;
@@ -233,7 +233,7 @@
 @btn-line-height: 22px;
 
 // @btn-circle-size: @btn-height-base;
-// @btn-circle-size-lg: @btn-height-lg;
+@btn-circle-size-lg: 49px;
 // @btn-circle-size-sm: @btn-height-sm;
 
 // @btn-square-size: @btn-height-base;
@@ -398,13 +398,13 @@
 // // Form
 // // ---
 // @label-required-color: @highlight-color;
-// @label-color: @heading-color;
+@label-color: #434343;
 // @form-warning-input-bg: @input-bg;
-// @form-item-margin-bottom: 24px;
+@form-item-margin-bottom: 22px;
 // @form-item-trailing-colon: true;
-// @form-vertical-label-padding: 0 0 8px;
+@form-vertical-label-padding: 0 0 6px;
 // @form-vertical-label-margin: 0;
-// @form-item-label-font-size: @font-size-base;
+@form-item-label-font-size: 16px;
 // @form-item-label-height: @input-height-base;
 // @form-item-label-colon-margin-right: 8px;
 // @form-item-label-colon-margin-left: 2px;
@@ -412,7 +412,7 @@
 
 // // Input
 // // ---
-// @input-height-base: @height-base;
+@input-height-base: 49px;
 // @input-height-lg: @height-lg;
 // @input-height-sm: @height-sm;
 // @input-padding-horizontal: @control-padding-horizontal - 1px;
@@ -435,8 +435,8 @@
 // @input-placeholder-color: hsv(0, 0, 75%);
 // @input-color: @text-color;
 // @input-icon-color: @input-color;
-// @input-border-color: @border-color-base;
-// @input-bg: @component-background;
+@input-border-color: rgba(140, 140, 140, 0.3);
+@input-bg: #fff;
 // @input-number-hover-border-color: @input-hover-border-color;
 // @input-number-handler-active-bg: #f4f4f4;
 // @input-number-handler-hover-bg: @primary-5;
@@ -1056,6 +1056,41 @@
 
 
 .ant-btn {
-  font-size: 14px;
-  padding: 5px 33px 4px 33px;
+  
+  &:not(.ant-btn-lg) {
+    font-size: 14px;
+    padding: 5px 33px 4px 33px;
+  }
+
+  &-primary {
+    font-weight: 400;
+  }
+}
+
+.ant-form-item-label > label {
+  font-size: 16px !important;
+  color: #434343;
+}
+
+.ant-form-item-explain,
+.ant-form-item-extra {
+  margin: 4px 0 0 0;
+  line-height: 17px !important;
+  color: #8C8C8C !important;
+}
+
+
+.ant-form-item-control-input-content > .ant-input,
+.ant-input-affix-wrapper {
+  height: 49px;
+  border: 1px solid rgba(140, 140, 140, 0.3) !important;
+  border-radius: 5px !important;
+}
+
+.ant-input-suffix {
+  font-size: 19px;
+}
+
+.ant-form-item-with-help {
+  margin-bottom: 22px !important;
 }

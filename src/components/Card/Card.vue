@@ -17,14 +17,39 @@ const props = withDefaults(defineProps<CardProps>(), {
 
 <style lang="scss" module>
 .card {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 15px;
 
+  &.default {
+    padding: 36px 44px 63px 44px;
+
+    @media (min-width: 768px) {
+      max-width: 498px;
+    }
+  }
 }
 
 .title {
+  margin: 0 0 13px 0;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #434343;
 
+  &.center {
+    text-align: center;
+  }
+
+  &.right {
+    text-align: right;
+  }
 }
 
 .caption {
-
+  padding: 0 10px;
+  margin: 0 0 24px 0;
+  color: #8C8C8C;
+  text-align: center;
 }
 </style>
