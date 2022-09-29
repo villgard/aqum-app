@@ -1,6 +1,6 @@
 import { useI18n } from "vue-i18n";
 import { computed } from "vue";
-import { localeObjects, setLocale } from "@/common/utils/locale";
+import { localeObjects, setLocale } from "@/utils/locale";
 
 export function useI18N(prefix?: string) {
   const i18nHook = useI18n();

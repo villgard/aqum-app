@@ -1,87 +1,92 @@
 <template>
-  <nav class="header__menu">
-    <ul class="header__menu-list">
-      <li v-for="item in menu" :key="item.label" class="header__menu-item">
-        <RouterLink v-if="item.to" :to="{ name: item.to }" class="header__menu-link">{{ item.label }}</RouterLink>
-        <a-dropdown v-else :trigger="['click']">
-          <a class="header__menu-link" @click.prevent>
-            {{ item.label }}
-            <DownOutlined width="8" height="4" />
-          </a>
-          <template #overlay>
-            <a-menu class="header__menu-submenu submenu">
-              <a-menu-item v-for="item in subMenu" :key="item.label" class="submenu__item">
-                  <RouterLink :to="{ name: item.to }" class="submenu__link">{{ item.label }}</RouterLink>
-              </a-menu-item>
-            </a-menu>
-          </template>
-        </a-dropdown>
-      </li>
-    </ul>
-  </nav>
+  <a-menu v-model:selectedKeys="current" mode="horizontal" :class="$style.menu">
+    <template v-for="(item, index) in menu">
+      <a-menu-item v-if="!item.submenu" :key="index">
+        <router-link :to="item.to">
+          {{ item.label }}
+        </router-link>
+      </a-menu-item>
+      <a-sub-menu v-if="item.submenu" :key="index" :class="$style.submenu">
+        <template #title>
+          {{ item.label }}
+        </template>
+        <a-menu-item v-for="(subItem, subIndex) in item.submenu" :key="`sub${index}` + subIndex">
+          <router-link :to="subItem.to">
+            {{ subItem.label }}
+          </router-link>
+        </a-menu-item>
+      </a-sub-menu>
+    </template>
+  </a-menu>
 </template>
 
-<script setup>
-import { useI18n } from "vue-i18n";
-import { DownOutlined } from '@ant-design/icons-vue';
-import { computed } from "vue";
+<script setup lang="ts">
+import { computed, ref } from 'vue';
+import { useI18N } from '@/hooks/useI18N';
 
-const { t } = useI18n();
+const { t } = useI18N('menu');
+const current = ref<void>(null);
 
-const menu = computed(() => [
-  {
-    label: t('menu.home'),
-    to: 'index',
-  },
-  {
-    label: t('menu.pricing'),
-    to: 'pricing',
-  },
-  {
-    label: t('menu.download'),
-    to: 'download',
-  },
-  {
-    label: t('menu.help'),
-  },
-]);
+interface MenuItem {
+  label: string;
+  to?: string;
+  submenu?: MenuItem[];
+}
 
-const subMenu = computed(() => [
-  {
-    label: t('menu.faq'),
-    to: 'faq',
-  },
-  {
-    label: t('menu.support'),
-    to: 'support',
-  },
-]);
-
+const menu = computed(
+  (): Array<MenuItem> => [
+    {
+      label: t('home'),
+      to: '/',
+    },
+    {
+      label: t('pricing'),
+      to: 'pricing',
+    },
+    {
+      label: t('download'),
+      to: 'download',
+    },
+    {
+      label: t('help'),
+      submenu: [
+        {
+          label: t('faq'),
+          to: 'faq',
+        },
+        {
+          label: t('support'),
+          to: 'support',
+        },
+      ],
+    },
+  ],
+);
 </script>
 
-<style lang="scss">
-@import "src/assets/scss/utils.scss";
-.header__menu {
-  max-width: 442px;
-  width: 100%;
-  height: 100%;
-  &-list {
-    height: 100%;
-    margin: 0;
-    @extend %flex-space-between;
-  }
-  &-item {
-  }
-  &-link {
-    font-family: 'Gotham Book', sans-serif;
-    @include menu-link();
-    color: var(--dark-2);
-    cursor: pointer;
-  }
+<style lang="scss" module>
+@import 'src/assets/scss/utils.scss';
+
+.menu {
+  border: none !important;
+  gap: 0 25px;
 }
 .submenu {
-  box-shadow: none !important;
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  border-radius: 5px;
+  :global {
+    .ant-menu-submenu-arrow {
+      display: block !important;
+      transform: translate(100%, -50%) rotate(90deg);
+      right: -6px;
+    }
+  }
+}
+
+:global {
+  .ant-menu-submenu-open,
+  .ant-menu-submenu-active {
+    * {
+      color: var(--primary-color) !important;
+    }
+  }
 }
 </style>

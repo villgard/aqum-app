@@ -1,29 +1,29 @@
 <template>
-<section class="mobile-app-banner">
-  <h2 class="mobile-app-banner__title h2-title">{{ t('landing.mobileApp.title') }}</h2>
-  <p class="mobile-app-banner__subtitle">{{ t('landing.mobileApp.subtitle') }}</p>
-  <div class="mobile-app-banner__content">
-    <div class="mobile-app-banner__banner">
-      <img src="../../assets/images/app-banner.png" alt="AQUM Mobile App" class="mobile-app-banner__img">
+  <section class="mobile-app-banner">
+    <h2 class="mobile-app-banner__title h2-title">{{ t('mobileApp.title') }}</h2>
+    <p class="mobile-app-banner__subtitle">{{ t('mobileApp.subtitle') }}</p>
+    <div class="mobile-app-banner__content">
+      <div class="mobile-app-banner__banner">
+        <img src="../../assets/images/app-banner.png" alt="AQUM Mobile App" class="mobile-app-banner__img" />
+      </div>
+      <div class="mobile-app-banner__banner">
+        <img src="../../assets/images/app-banner.png" alt="AQUM Mobile App" class="mobile-app-banner__img" />
+      </div>
+      <div class="mobile-app-banner__banner">
+        <img src="../../assets/images/app-banner.png" alt="AQUM Mobile App" class="mobile-app-banner__img" />
+      </div>
     </div>
-    <div class="mobile-app-banner__banner">
-      <img src="../../assets/images/app-banner.png" alt="AQUM Mobile App" class="mobile-app-banner__img">
-    </div>
-    <div class="mobile-app-banner__banner">
-      <img src="../../assets/images/app-banner.png" alt="AQUM Mobile App" class="mobile-app-banner__img">
-    </div>
-  </div>
-</section>
+  </section>
 </template>
 
 <script lang="ts" setup>
-import {useI18n} from "vue-i18n";
+import { useI18N } from '@/hooks/useI18N';
 
-const { t } = useI18n();
+const { t } = useI18N('home');
 </script>
 
 <style lang="scss">
-@import "/src/assets/scss/utils.scss";
+@import '/src/assets/scss/utils.scss';
 
 .mobile-app-banner {
   padding: 70px 0 40px;

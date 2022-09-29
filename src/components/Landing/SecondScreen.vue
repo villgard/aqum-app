@@ -5,19 +5,19 @@
     </div>
     <div class="second-screen__content">
       <h2 class="second-screen__title h2-title">
-        {{ t('landing.secondScreen.title') }}
+        {{ t('secondScreen.title') }}
       </h2>
       <p class="second-screen__subtitle">
-        {{ t('landing.secondScreen.subtitle') }}
+        {{ t('secondScreen.subtitle') }}
       </p>
     </div>
   </section>
 </template>
 
 <script setup>
-import { useI18n } from "vue-i18n";
+import { useI18N } from '@/hooks/useI18N';
 
-const { t } = useI18n();
+const { t } = useI18N('home');
 </script>
 
 <style lang="scss">

@@ -1,17 +1,17 @@
 <template>
 <section class="download-banner">
-  <h2 class="download-banner__title h2-title">{{ t('landing.downloadBanner.title') }}</h2>
-  <p class="download-banner__subtitle">{{ t('landing.downloadBanner.subtitle') }}</p>
+  <h2 class="download-banner__title h2-title">{{ t('downloadBanner.title') }}</h2>
+  <p class="download-banner__subtitle">{{ t('downloadBanner.subtitle') }}</p>
   <a-button class="download-banner__button" type="primary" shape="round" :size="size">
-    {{ t('landing.downloadBanner.button') }}
+    {{ t('downloadBanner.button') }}
   </a-button>
 </section>
 </template>
 
 <script setup>
-import { useI18n } from "vue-i18n";
+import { useI18N } from '@/hooks/useI18N';
 
-const { t } = useI18n();
+const { t } = useI18N('home');
 </script>
 
 <style lang="scss">

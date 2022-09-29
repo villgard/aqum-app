@@ -1,7 +1,7 @@
 <template>
   <section class="opportunities">
-    <h2 class="opportunities__title h2-title">{{ t('landing.opportunities.title') }}</h2>
-    <p class="opportunities__subtitle">{{ t('landing.opportunities.subtitle') }}</p>
+    <h2 class="opportunities__title h2-title">{{ t('opportunities.title') }}</h2>
+    <p class="opportunities__subtitle">{{ t('opportunities.subtitle') }}</p>
     <ul class="opportunities__list">
       <li
           v-for="(item, index) in opportunitiesList"
@@ -22,40 +22,40 @@
 
 <script setup>
 import { computed } from "vue";
-import { useI18n } from "vue-i18n";
+import { useI18N } from '@/hooks/useI18N';
 
-const { t } = useI18n();
+const { t } = useI18N('home');
 
 const opportunitiesList = computed(() => [
   {
     icon: '/src/assets/images/opportunities/opp-icon-1.svg',
-    label: t('landing.opportunities.list.title.one'),
-    text: t('landing.opportunities.list.text.one'),
+    label: t('opportunities.list.title.one'),
+    text: t('opportunities.list.text.one'),
   },
   {
     icon: '/src/assets/images/opportunities/opp-icon-2.svg',
-    label: t('landing.opportunities.list.title.two'),
-    text: t('landing.opportunities.list.text.two'),
+    label: t('opportunities.list.title.two'),
+    text: t('opportunities.list.text.two'),
   },
   {
     icon: '/src/assets/images/opportunities/opp-icon-3.svg',
-    label: t('landing.opportunities.list.title.three'),
-    text: t('landing.opportunities.list.text.three'),
+    label: t('opportunities.list.title.three'),
+    text: t('opportunities.list.text.three'),
   },
   {
     icon: '/src/assets/images/opportunities/opp-icon-4.svg',
-    label: t('landing.opportunities.list.title.four'),
-    text: t('landing.opportunities.list.text.four'),
+    label: t('opportunities.list.title.four'),
+    text: t('opportunities.list.text.four'),
   },
   {
     icon: '/src/assets/images/opportunities/opp-icon-5.svg',
-    label: t('landing.opportunities.list.title.five'),
-    text: t('landing.opportunities.list.text.five'),
+    label: t('opportunities.list.title.five'),
+    text: t('opportunities.list.text.five'),
   },
   {
     icon: '/src/assets/images/opportunities/opp-icon-6.svg',
-    label: t('landing.opportunities.list.title.six'),
-    text: t('landing.opportunities.list.text.six'),
+    label: t('opportunities.list.title.six'),
+    text: t('opportunities.list.text.six'),
   },
 ])
 </script>

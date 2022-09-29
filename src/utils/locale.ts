@@ -14,10 +14,15 @@ export const localeObjects: Record<string, LocaleObject> = {
     flag: 'us',
     label: 'EN',
   },
-  ar: {
-    key: 'ar',
-    flag: 'ar',
-    label: 'AR',
+  ru: {
+    key: 'ru',
+    flag: 'ru',
+    label: 'RU',
+  },
+  ua: {
+    key: 'ua',
+    flag: 'ua',
+    label: 'UA',
   },
 };
 

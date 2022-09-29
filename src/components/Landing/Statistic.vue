@@ -4,36 +4,36 @@
       <a-avatar src="https://joeschmoe.io/api/v1/random" class="statistic__quote-avatar" />
       <p class="statistic__quote-text">
         <span class="statistic__quote-name">
-          {{ t('landing.statistic.quote.name') }}
+          {{ t('statistic.quote.name') }}
         </span>
         <span class="statistic__quote-quote">
-          {{ t('landing.statistic.quote.text') }}
+          {{ t('statistic.quote.text') }}
         </span>
       </p>
     </div>
     <ul class="statistic__nums-list">
       <li class="statistic__nums-item">
         <span class="statistic__nums-number">
-          {{ t('landing.statistic.nums.num.first') }}
+          {{ t('statistic.nums.num.first') }}
         </span>
         <span class="statistic__nums-text">
-          {{ t('landing.statistic.nums.text.first') }}
+          {{ t('statistic.nums.text.first') }}
         </span>
       </li>
       <li class="statistic__nums-item">
         <span class="statistic__nums-number">
-          {{ t('landing.statistic.nums.num.second') }}
+          {{ t('statistic.nums.num.second') }}
         </span>
         <span class="statistic__nums-text">
-          {{ t('landing.statistic.nums.text.second') }}
+          {{ t('statistic.nums.text.second') }}
         </span>
       </li>
       <li class="statistic__nums-item">
         <span class="statistic__nums-number">
-          {{ t('landing.statistic.nums.num.third') }}
+          {{ t('statistic.nums.num.third') }}
         </span>
         <span class="statistic__nums-text">
-          {{ t('landing.statistic.nums.text.third') }}
+          {{ t('statistic.nums.text.third') }}
         </span>
       </li>
     </ul>
@@ -41,9 +41,9 @@
 </template>
 
 <script setup>
-import { useI18n } from 'vue-i18n';
+import { useI18N } from '@/hooks/useI18N';
 
-const { t } = useI18n();
+const { t } = useI18N('home');
 </script>
 
 <style lang="scss">
