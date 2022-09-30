@@ -1,5 +1,5 @@
 <template>
-  <a-form :class="$style.form" :model="formState" layout="vertical" @validate="ts">
+  <a-form :class="$style.form" :model="formState" layout="vertical">
     <a-form-item :label="t('form.password')" name="password" :rules="[{ required: true, validator: checkPassword, message: t('form.passwordCaption') }]">
       <a-input-password v-model:value="formState.password" />
     </a-form-item>

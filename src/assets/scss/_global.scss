@@ -9,7 +9,7 @@
 }
 
 .h2-title {
-  font-family: 'Gotham Bold', sans-serif;
+  font-family: 'Gotham', sans-serif;
   @include h2;
   color: var(--dark-1);
 }
@@ -24,4 +24,28 @@
 
 ul, ol, dl {
   margin: 0;
+}
+
+.text {
+
+  h1 {
+    margin: 0 0 42px 0;
+    text-align: center;
+    @include h2;
+    font-weight: 700;
+    color: var(--dark-1);
+  }
+
+  h2 {
+    margin: 0 0 28px 0;
+    @include terms-text;
+    color: #595959;
+  }
+
+  p {
+
+    &:not(:last-child) {
+      margin: 0 0 28px 0;
+    }
+  }
 }

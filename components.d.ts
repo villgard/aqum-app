@@ -32,11 +32,12 @@ declare module '@vue/runtime-core' {
     ConfirmAccount: typeof import('./src/components/Auth/ConfirmAccount/ConfirmAccount.vue')['default']
     Container: typeof import('./src/components/Common/Container.vue')['default']
     Desktop: typeof import('./src/components/Header/Desktop/index.vue')['default']
+    Documents: typeof import('./src/components/Documents/Documents.vue')['default']
     DownloadBanner: typeof import('./src/components/Landing/DownloadBanner.vue')['default']
     FAQ: typeof import('./src/components/FAQ/index.vue')['default']
     Features: typeof import('./src/components/Landing/Features/index.vue')['default']
     Footer: typeof import('./src/components/Footer/Footer.vue')['default']
-    Form: typeof import('./src/components/Auth/SignUp/Form.vue')['default']
+    Form: typeof import('./src/components/Auth/Login/Form.vue')['default']
     Header: typeof import('./src/components/Header.vue')['default']
     Heading: typeof import('./src/components/Legal/Heading.vue')['default']
     LanguageSelector: typeof import('./src/components/LanguageSelector.vue')['default']
@@ -47,6 +48,7 @@ declare module '@vue/runtime-core' {
     MainScreen: typeof import('./src/components/Landing/MainScreen.vue')['default']
     Menu: typeof import('./src/components/Menu.vue')['default']
     MobileAppBanner: typeof import('./src/components/Landing/MobileAppBanner.vue')['default']
+    Navigation: typeof import('./src/components/Documents/Navigation.vue')['default']
     Opportunities: typeof import('./src/components/Landing/Opportunities.vue')['default']
     RecoverConfirm: typeof import('./src/components/Auth/RecoverConfirm/RecoverConfirm.vue')['default']
     RecoverPassword: typeof import('./src/components/Auth/RecoverPassword/RecoverPassword.vue')['default']
@@ -56,5 +58,6 @@ declare module '@vue/runtime-core' {
     SecondScreen: typeof import('./src/components/Landing/SecondScreen.vue')['default']
     SignUp: typeof import('./src/components/Auth/SignUp/SignUp.vue')['default']
     Statistic: typeof import('./src/components/Landing/Statistic.vue')['default']
+    UnderHeader: typeof import('./src/components/UnderHeader/UnderHeader.vue')['default']
   }
 }

@@ -4,6 +4,7 @@ import home from './home';
 import footer from './footer';
 import legal from './legal';
 import auth from './auth';
+import documents from './documents';
 
 export default {
   header,
@@ -12,4 +13,5 @@ export default {
   footer,
   legal,
   auth,
+  documents,
 };

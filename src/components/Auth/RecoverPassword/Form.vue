@@ -1,5 +1,5 @@
 <template>
-  <a-form :class="$style.form" :model="formState" layout="vertical" @validate="ts">
+  <a-form :class="$style.form" :model="formState" layout="vertical">
     <a-form-item :label="t('form.email')" name="email" :rules="[{ type: 'email', message: t('form.emailType') }, { required: true, message: t('form.emailRequired') }]">
       <a-input v-model:value="formState.email" />
     </a-form-item>

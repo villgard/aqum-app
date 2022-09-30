@@ -6,6 +6,7 @@ import Login from '@/router/login';
 import RecoverPassword from '@/router/recoverPassword';
 import RecoverConfirm from '@/router/recoverConfirm';
 import ResetPassword from '@/router/resetPassword';
+import Documents from '@/router/documents';
 
 declare module 'vue-router' {
   interface RouterMeta {
@@ -26,6 +27,7 @@ const routes: RouterRecordRaw[] = [
   RecoverPassword,
   RecoverConfirm,
   ResetPassword,
+  Documents,
   {
     name: 'pricing',
     path: '/pricing',
