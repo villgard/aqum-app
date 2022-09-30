@@ -63,15 +63,15 @@ const lists = computed(
     legal: [
       {
         label: t('list.legal.terms'),
-        to: 'index',
+        to: 'termsOfService',
       },
       {
         label: t('list.legal.agree'),
-        to: 'index',
+        to: 'userAgreement',
       },
       {
         label: t('list.legal.privacy'),
-        to: 'index',
+        to: 'privacyPolicy',
       },
     ],
   }),

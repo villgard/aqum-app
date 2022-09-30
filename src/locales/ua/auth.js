@@ -6,6 +6,7 @@ export default {
     password: 'Password',
     passwordCaption: 'Password must contain numbers (0-9), Capital and uppercase Latin letters (A-z)',
     repeatPassword: 'Repeat Password',
+    repeatPasswordError: 'Passwords do not match',
     telegram: 'Telegram <span>(Optional)</span>',
     errorText: 'Incorect Email or Password',
     footerText: 'Already have an account?',

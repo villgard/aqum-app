@@ -799,7 +799,7 @@
 // @avatar-font-size-base: 18px;
 // @avatar-font-size-lg: 24px;
 // @avatar-font-size-sm: 14px;
-// @avatar-bg: #ccc;
+@avatar-bg: #F5F5F5;
 // @avatar-color: #fff;
 // @avatar-border-radius: @border-radius-base;
 // @avatar-group-overlapping: -8px;
@@ -1063,7 +1063,14 @@
   }
 
   &-primary {
-    font-weight: 400;
+    &.ant-btn-lg {
+      font-weight: 400;
+    }
+  }
+
+  &-secondary {
+    background-color: #F5F5F5;
+    color: #508FF8;
   }
 }
 

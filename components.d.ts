@@ -34,6 +34,7 @@ declare module '@vue/runtime-core' {
     Desktop: typeof import('./src/components/Header/Desktop/index.vue')['default']
     Documents: typeof import('./src/components/Documents/Documents.vue')['default']
     DownloadBanner: typeof import('./src/components/Landing/DownloadBanner.vue')['default']
+    Downloads: typeof import('./src/components/Downloads/Downloads.vue')['default']
     FAQ: typeof import('./src/components/FAQ/index.vue')['default']
     Features: typeof import('./src/components/Landing/Features/index.vue')['default']
     Footer: typeof import('./src/components/Footer/Footer.vue')['default']

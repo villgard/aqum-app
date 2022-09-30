@@ -41,22 +41,22 @@ const menu = computed(
     },
     {
       label: t('pricing'),
-      to: 'pricing',
+      to: '/pricing',
     },
     {
       label: t('download'),
-      to: 'download',
+      to: '/downloads',
     },
     {
       label: t('help'),
       submenu: [
         {
           label: t('faq'),
-          to: 'faq',
+          to: '/faq',
         },
         {
           label: t('support'),
-          to: 'support',
+          to: '/support',
         },
       ],
     },
