@@ -456,15 +456,12 @@
 
 // // Select
 // // ---
-// @select-border-color: @border-color-base;
-// @select-item-selected-color: @text-color;
-// @select-item-selected-font-weight: 600;
-// @select-dropdown-bg: @component-background;
-// @select-item-selected-bg: @primary-1;
-// @select-item-active-bg: @item-hover-bg;
-// @select-dropdown-vertical-padding: @dropdown-vertical-padding;
-// @select-dropdown-font-size: @dropdown-font-size;
-// @select-dropdown-line-height: @dropdown-line-height;
+@select-border-color: rgba(140, 140, 140, 0.3);
+@select-item-selected-color: #434343;
+@select-item-selected-font-weight: 400;
+@select-dropdown-bg: #fff;
+@select-dropdown-font-size: 16px;
+@select-dropdown-line-height: 24px;
 // @select-dropdown-height: 32px;
 // @select-background: @component-background;
 // @select-clear-background: @select-background;
@@ -1092,8 +1089,9 @@
 
 
 .ant-form-item-control-input-content > .ant-input,
+.ant-select-single:not(.ant-select-customize-input) .ant-select-selector,
 .ant-input-affix-wrapper {
-  height: 49px;
+  height: 49px !important;
   border: 1px solid rgba(140, 140, 140, 0.3) !important;
   border-radius: 5px !important;
 }
@@ -1104,4 +1102,21 @@
 
 .ant-form-item-with-help {
   margin-bottom: 22px !important;
+}
+
+.ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+  font-weight: 400 !important;
+  color: #434343 !important;
+}
+
+.ant-select-selection-item,
+.ant-select-item-option-content {
+  display: flex;
+  align-items: center;
+  gap: 0 6px;
+
+  span {
+    display: flex;
+    align-items: center;
+  }
 }

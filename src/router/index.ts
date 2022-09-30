@@ -9,6 +9,12 @@ import ResetPassword from '@/router/resetPassword';
 import Documents from '@/router/documents';
 import Downloads from '@/router/downloads';
 import Pricing from '@/router/pricing';
+import Payment from '@/router/payment';
+import PaymentSuccess from '@/router/paymentSuccess';
+import PaymentWaiting from '@/router/paymentWaiting';
+import Account from '@/router/account';
+import ChangePassword from '@/router/changePassword';
+import ChangeEmail from '@/router/changeEmail';
 
 declare module 'vue-router' {
   interface RouterMeta {
@@ -32,6 +38,12 @@ const routes: RouterRecordRaw[] = [
   Documents,
   Downloads,
   Pricing,
+  Payment,
+  PaymentSuccess,
+  PaymentWaiting,
+  Account,
+  ChangePassword,
+  ChangeEmail,
   {
     name: 'faq',
     path: '/faq',

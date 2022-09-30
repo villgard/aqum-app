@@ -1,6 +1,6 @@
 <template>
   <div :class="$style.card">
-    <div :class="$style.popular">Most Popular Plan</div>
+    <!--<div :class="$style.popular">Most Popular Plan</div>-->
     <div :class="$style.wrapper">
       <div :class="$style.head">
         <div :class="$style.headInfo">
