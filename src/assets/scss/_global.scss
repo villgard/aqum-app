@@ -34,6 +34,27 @@ ul, ol, dl {
   }
 }
 
-@media screen {
-  
+
+.text {
+
+  h1 {
+    margin: 0 0 42px 0;
+    text-align: center;
+    @include h2;
+    font-weight: 700;
+    color: var(--dark-1);
+  }
+
+  h2 {
+    margin: 0 0 28px 0;
+    @include terms-text;
+    color: #595959;
+  }
+
+  p {
+
+    &:not(:last-child) {
+      margin: 0 0 28px 0;
+    }
+  }
 }

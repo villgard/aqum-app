@@ -25,11 +25,6 @@ function getVisualViewportHeight() {
 }
 </script>
 
-<style lang="less">
-@import 'ant-design-vue/dist/antd.less';
-@import '@/assets/scss/antd.less';
-</style>
-
 <style lang="scss">
 @import 'assets/scss/utils.scss';
 @import 'assets/scss/variables.scss';
@@ -50,6 +45,11 @@ main {
 }
 
 .ant-layout {
-  min-height: var(--visual-viewport-height);
+  min-height: var(--visual-viewport-height) !important;
 }
+</style>
+
+<style lang="less">
+  @import 'ant-design-vue/dist/antd.less';
+  @import '@/assets/scss/antd.less';
 </style>

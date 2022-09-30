@@ -20,6 +20,8 @@ defineProps({
 @import "/src/assets/scss/utils.scss";
 
 .footer__content-list {
+  list-style: none;
+
   &--title {
     margin-bottom: 10px;
     font-family: var(--font);
