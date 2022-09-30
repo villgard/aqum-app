@@ -1,40 +1,32 @@
 <template>
   <div :class="$style.navigation">
-    <a-menu :selectedKeys="current" mode="horizontal" :class="$style.list">
-      <a-menu-item v-for="(item, index) in navigation" :key="index" :class="$style.item">
-        <router-link :to="item.to">
-          {{ item.label }}
-        </router-link>
+    <a-menu :selectedKeys="current" @click="selected" mode="horizontal" :class="$style.list">
+      <a-menu-item v-for="item in navigation" :key="item.value" :class="$style.item">
+        {{ item.label }}
       </a-menu-item>
     </a-menu>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { computed, ref, onMounted } from 'vue';
-import { useRouter } from 'vue-router';
-import { useI18N } from '@/hooks/useI18N';
+import { ref, defineEmits, computed } from 'vue';
 
-const { currentRoute } = useRouter();
-const { t } = useI18N('documents.navigation');
-const navigation = computed(() => [
-  {
-    label: t([0]),
-    to: '/documents',
-  },
-  {
-    label: t([1]),
-    to: '/documents/user-agreement',
-  },
-  {
-    label: t([2]),
-    to: '/documents/privacy-policy',
-  },
-])
+interface NavigationItem {
+  label: string;
+  value: string;
+}
 
-const current = computed(() => [
-  navigation.value.findIndex(item => item.to === currentRoute.value.path)
-]);
+interface Navigation {
+  navigation: NavigationItem[];
+  default: number;
+}
+
+const emit = defineEmits<{
+  (e: 'select', value: number): void;
+}>();
+const props = defineProps<Navigation>();
+const current = computed<Array<string>>(() => [props.default.toString()]);
+const selected = ({ key }) => emit('select', key);
 </script>
 
 <style lang="scss" module>
@@ -42,13 +34,14 @@ const current = computed(() => [
 .navigation {
   display: flex;
   justify-content: center;
-  margin: 20px 0 48px 0;
+  margin: 20px 0 98px 0;
 }
 .list {
   position: relative;
   background: transparent;
   justify-content: center;
   border: none;
+  color: rgba(89, 89, 89, 0.6);
 
   &::after {
     content: '';
@@ -63,6 +56,7 @@ const current = computed(() => [
 
   :global {
     .ant-menu-item-selected {
+      color: #595959 !important;
 
       &::after {
         opacity: 1;

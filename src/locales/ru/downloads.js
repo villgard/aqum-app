@@ -14,6 +14,6 @@ export default {
     version: 'Version',
     caption: '<p>Support macOS 10.11 (EI Capitan) and above</p><p>Also for MacOS M Series</p>',
     button: 'Download',
-    buttonSecondary: 'Download M1',
+    buttonSecondary: 'Download Apple Silicon',
   },
 };

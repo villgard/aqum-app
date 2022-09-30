@@ -1,5 +1,5 @@
 <template>
-  <div :class="$style.underHeader">
+  <div :class="[$style.underHeader, background && $style.withBackground]">
     <div v-if="image" :class="$style.background">
       <img :src="image" :class="$style.image" />
     </div>
@@ -15,7 +15,9 @@
 import Container from '@/components/Common/Container.vue';
 import { type UnderHeaderProps } from './index';
 
-const props = defineProps<UnderHeaderProps>();
+const props = withDefaults(defineProps<UnderHeaderProps>(), {
+  background: true,
+});
 </script>
 
 <style lang="scss" module>
@@ -25,7 +27,10 @@ const props = defineProps<UnderHeaderProps>();
   position: relative;
   min-height: 210px;
   padding: 50px 0 56px 0;
-  background-color: #F5F5F5;
+
+  &.withBackground {
+    background-color: #F5F5F5;
+  }
 }
 
 .background {

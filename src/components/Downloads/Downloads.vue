@@ -38,6 +38,8 @@ const { t } = useI18N('downloads');
 <style lang="scss" module>
   .cards {
     display: flex;
+    justify-content: center;
     gap: 24px;
+    padding: 66px 0 24px 0;
   }
 </style>

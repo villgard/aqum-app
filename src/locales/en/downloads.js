@@ -10,10 +10,10 @@ export default {
     button: 'Download 64 bit',
   },
   mac: {
-    title: 'MacOS',
+    title: 'Download MacOS',
     version: 'Version',
     caption: '<p>Support macOS 10.11 (EI Capitan) and above</p><p>Also for MacOS M Series</p>',
-    button: 'Download',
-    buttonSecondary: 'Download M1',
+    button: 'Intel',
+    buttonSecondary: 'Apple Silicon',
   },
 };

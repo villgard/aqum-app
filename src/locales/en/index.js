@@ -6,6 +6,7 @@ import legal from './legal';
 import auth from './auth';
 import documents from './documents';
 import downloads from './downloads';
+import pricing from './pricing';
 
 export default {
   header,
@@ -16,4 +17,5 @@ export default {
   auth,
   documents,
   downloads,
+  pricing,
 };

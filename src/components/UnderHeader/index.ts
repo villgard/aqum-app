@@ -4,4 +4,5 @@ export interface UnderHeaderProps {
   image?: string;
   title: string;
   caption?: string;
+  background?: boolean;
 };
