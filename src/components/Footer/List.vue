@@ -22,7 +22,7 @@ defineProps({
 .footer__content-list {
   &--title {
     margin-bottom: 10px;
-    font-family: 'Gotham Medium', sans-serif;
+    font-family: var(--font);
     @include footer-list-title;
     color: var(--dark-1);
   }

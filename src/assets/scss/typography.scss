@@ -129,9 +129,7 @@
 }
 
 @mixin quote {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 22px;
+  @include t(14, 22, 500);
 }
 
 @mixin card-title {

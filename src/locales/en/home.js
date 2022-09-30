@@ -1,4 +1,9 @@
 export default {
+  main: {
+    title: 'Anti-Detect Browser for Multi-Accounting',
+    subtitle: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,',
+    button: 'Join Now',
+  },
   statistic: {
     quote: {
       name: 'Marie Wollis',
@@ -14,12 +19,13 @@ export default {
         first: 'Sed ut unde omnis iste ',
         second: 'Sed ut unde omnis iste ',
         third: 'Sed ut unde omnis iste ',
-      }
-    }
+      },
+    },
   },
   secondScreen: {
     title: 'One antidetect for all directions',
-    subtitle: 'Velit euismod in pellentesque massa placerat duis ultricies lacus. Nisl condimentum id venenatis a condimentum vitae. Posuere urna nec tincidunt praesent. At in tellus integer feugiat. Velit euismod in pellentesque massa placerat duis ultricies lacus. Nisl condimentum id venenatis a condimentum vitae. Posuere urna nec tincidunt',
+    subtitle:
+      'Velit euismod in pellentesque massa placerat duis ultricies lacus. Nisl condimentum id venenatis a condimentum vitae. Posuere urna nec tincidunt praesent. At in tellus integer feugiat. Velit euismod in pellentesque massa placerat duis ultricies lacus. Nisl condimentum id venenatis a condimentum vitae. Posuere urna nec tincidunt',
   },
   opportunities: {
     title: 'Use every opportunity to',
@@ -41,7 +47,7 @@ export default {
         five: 'Sed ut perspiciatis unde omnis iste nas error sit voluptatem accusantium doloremque latium, totam rem ',
         six: 'Sed ut perspiciatis unde omnis iste nas error sit voluptatem accusantium doloremque latium, totam rem ',
       },
-    }
+    },
   },
   downloadBanner: {
     title: 'Download Nero Browser',
