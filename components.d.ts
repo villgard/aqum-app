@@ -12,8 +12,8 @@ declare module '@vue/runtime-core' {
     ACard: typeof import('ant-design-vue/es')['Card']
     Account: typeof import('./src/components/Account/Account.vue')['default']
     ACol: typeof import('ant-design-vue/es')['Col']
-    ADivider: typeof import('ant-design-vue/es')['Divider']
-    ADropdown: typeof import('ant-design-vue/es')['Dropdown']
+    ACollapse: typeof import('ant-design-vue/es')['Collapse']
+    ACollapsePanel: typeof import('ant-design-vue/es')['CollapsePanel']
     AForm: typeof import('ant-design-vue/es')['Form']
     AFormItem: typeof import('ant-design-vue/es')['FormItem']
     AInput: typeof import('ant-design-vue/es')['Input']
@@ -74,6 +74,8 @@ declare module '@vue/runtime-core' {
     NavigationInline: typeof import('./src/components/Common/NavigationInline.vue')['default']
     Opportunities: typeof import('./src/components/Landing/Opportunities.vue')['default']
     Payment: typeof import('./src/components/Payment/Payment.vue')['default']
+    Opportunities: typeof import('./src/components/Landing/Opportunities/Opportunities.vue')['default']
+    OpportunitiesList: typeof import('./src/components/Landing/Opportunities/OpportunitiesList.vue')['default']
     PaymentSystems: typeof import('./src/components/Pricing/PaymentSystems.vue')['default']
     Periods: typeof import('./src/components/Pricing/Periods.vue')['default']
     Plan: typeof import('./src/components/Pricing/Plan.vue')['default']
@@ -92,5 +94,6 @@ declare module '@vue/runtime-core' {
     UnderHeader: typeof import('./src/components/UnderHeader/UnderHeader.vue')['default']
     Visa: typeof import('./src/components/Icons/Visa.vue')['default']
     Waiting: typeof import('./src/components/Payment/Waiting.vue')['default']
+    TabContent: typeof import('./src/components/FAQ/TabContent.vue')['default']
   }
 }

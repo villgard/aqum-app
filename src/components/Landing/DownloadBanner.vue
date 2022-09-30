@@ -1,23 +1,25 @@
 <template>
-<section class="download-banner">
-  <h2 class="download-banner__title h2-title">{{ t('downloadBanner.title') }}</h2>
-  <p class="download-banner__subtitle">{{ t('downloadBanner.subtitle') }}</p>
-  <a-button class="download-banner__button" type="primary" shape="round" :size="size">
-    {{ t('downloadBanner.button') }}
-  </a-button>
-</section>
+  <section :class="$style.downloadBanner">
+    <h2 :class="[$style.title, $style.titleH2]">{{ t('downloadBanner.title') }}</h2>
+    <p :class="$style.subtitle">{{ t('downloadBanner.subtitle') }}</p>
+    <a-button :class="$style.button" type="primary" shape="round" @click="router.push({ name: 'download' })">
+      {{ t('downloadBanner.button') }}
+    </a-button>
+  </section>
 </template>
 
 <script setup>
 import { useI18N } from '@/hooks/useI18N';
+import { useRouter } from 'vue-router';
 
+const router = useRouter();
 const { t } = useI18N('home');
 </script>
 
-<style lang="scss">
-@import "/src/assets/scss/utils.scss";
+<style lang="scss" module>
+@import '@/assets/scss/utils.scss';
 
-.download-banner {
+.downloadBanner {
   padding: 59px 0 46px;
   display: flex;
   flex-direction: column;
@@ -25,24 +27,46 @@ const { t } = useI18N('home');
   justify-content: center;
   background: no-repeat url('/src/assets/images/download-bg.png');
   background-size: 100% 100%;
-  &__title {
+  .title {
     margin-bottom: 12px;
   }
-  &__subtitle {
+  .subtitle {
     max-width: 517px;
     text-align: center;
     margin-bottom: 32px;
     @include p-subtitle-text-2;
     color: var(--dark-2);
   }
-  &__button {
-    &.ant-btn-round {
+  :global {
+    .ant-btn-round {
       height: auto;
       padding: 13px 57px;
-      font-family: 'Gotham Book', sans-serif;
       @include button-medium;
-      font-weight: 400;
       background-color: var(--blue);
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .downloadBanner {
+    padding: 42px 15px;
+    .subtitle {
+      @include t(14, 130%);
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .downloadBanner {
+    padding: 37px 15px;
+    .title {
+      margin-bottom: 8px;
+    }
+    .subtitle {
+      margin-bottom: 28px;
     }
   }
 }

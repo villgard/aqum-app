@@ -3,6 +3,7 @@ import menu from './menu';
 import home from './home';
 import footer from './footer';
 import legal from './legal';
+import faq from './faq';
 import auth from './auth';
 import documents from './documents';
 import downloads from './downloads';
@@ -22,4 +23,5 @@ export default {
   pricing,
   payment,
   account,
+  faq,
 };

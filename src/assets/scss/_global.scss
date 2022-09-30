@@ -8,8 +8,9 @@
   padding: 0 15px;
 }
 
-.h2-title {
-  font-family: 'Gotham', sans-serif;
+.h2-title,
+.titleH2 {
+  font-family: var(--font), sans-serif;
   @include h2;
   color: var(--dark-1);
 }
@@ -19,12 +20,20 @@
 }
 
 .p-subtitle-2 {
+  font-family: var(--font), sans-serif;
   @include p-subtitle-text-2;
 }
 
 ul, ol, dl {
   margin: 0;
 }
+
+@media screen and (max-width: 992px){
+  .h2-title, .titleH2 {
+    @include t(24, 29, 500);
+  }
+}
+
 
 .text {
 

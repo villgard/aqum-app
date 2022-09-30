@@ -1,19 +1,19 @@
 <template>
-  <a-layout-header>
+  <a-layout-header :class="[$style.header, isMainPage && $style.half]">
     <Container>
       <a-row :gutter="[0, 16]">
-        <a-col :span="6">
+        <a-col :span="4">
           <Logo />
         </a-col>
-        <a-col :span="12">
-          <a-row justify="center">
+        <a-col :span="14">
+          <a-row justify="center" :class="$style.menu">
             <a-col>
               <Menu />
             </a-col>
           </a-row>
         </a-col>
         <a-col :span="6">
-          <a-row gap="26" justify="end" align="middle" :class="$style.tools">
+          <a-row justify="end" align="middle" :class="$style.tools">
             <LanguageSelector />
             <router-link to="registration">
               <a-button shape="round">
@@ -33,6 +33,11 @@ import Logo from '@/components/Logo.vue';
 import Menu from '@/components/Menu.vue';
 import LanguageSelector from '@/components/LanguageSelector.vue';
 import { useI18N } from '@/hooks/useI18N';
+import { useRoute } from 'vue-router';
+import { computed } from 'vue';
+
+const route = useRoute();
+const isMainPage = computed(() => route.name === 'index');
 
 const { t } = useI18N('header');
 </script>
@@ -43,13 +48,23 @@ const { t } = useI18N('header');
 .header {
   height: 68px;
   background: var(--white);
-  &__content {
-    height: 100%;
-    @extend %flex-space-between;
+  &.half {
+    background: linear-gradient(to right, var(--white) 50%, transparent 50%);
+  }
+  :global {
+    .ant-menu {
+      background: transparent;
+    }
+  }
+  .menu {
+    position: relative;
+    z-index: 15;
   }
 }
 
 .tools {
+  position: relative;
+  z-index: 15;
   gap: 0 6px;
 }
 </style>

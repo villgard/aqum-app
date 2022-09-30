@@ -40,6 +40,10 @@ html {
   font: 16px/1.3 var(--font);
 }
 
+main {
+  background-color: var(--gray-1);
+}
+
 .ant-layout {
   min-height: var(--visual-viewport-height) !important;
 }
