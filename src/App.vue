@@ -31,7 +31,7 @@ function zoomer() {
       zoom: null,
   };
 
-  if (width < 1440 && width >= 1024) {
+  if (width >= 1024) {
     result.viewport = 1440;
     result.zoom = width / 1440;
   } else if (width >= 768 && width < 1024) {

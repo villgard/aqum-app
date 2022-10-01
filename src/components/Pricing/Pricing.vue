@@ -2,9 +2,9 @@
   <UnderHeader :title="t('underHeader.title')" :caption="t('underHeader.caption')" :background="false" />
   <Periods :navigation="periods" @select="updatePeriod" :default="period"/>
   <Container>
-    <a-row :class="$style.wrapper" :gutter="[24, 0]">
-      <a-col :span="12"><SelectedPlan /></a-col>
-      <a-col :span="12" :class="$style.planList">
+    <a-row :class="$style.wrapper" :gutter="[24, 40]">
+      <a-col :span="12" :class="$style.column"><SelectedPlan /></a-col>
+      <a-col :span="12" :class="[$style.column, $style.planList]">
         <Plan v-for="plan in planList"
           :key="plan.value"
           :value="plan.value"
@@ -114,6 +114,18 @@ const selectPlan = (plan: string) => {
   .wrapper {
     max-width: 1020px;
     margin: 0 auto !important;
+
+    @media (max-width: 767px) {
+      flex-direction: column-reverse;
+      gap: 40px;
+
+      .column {
+        width: 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 0 !important;
+      }
+    }
   }
 
   .planList {

@@ -85,6 +85,15 @@ const lists = computed(
   align-items: flex-start;
   width: 100%;
   max-width: 550px;
-  padding: 15px 20px 0 20px;
+  
+  @media (min-width: 768px) {
+    padding: 15px 20px 0 20px;
+  }
+
+  @media (max-width: 767px) {
+    padding: 32px 0 0 0;
+    flex-wrap: wrap;
+    gap: 48px;
+  }
 }
 </style>

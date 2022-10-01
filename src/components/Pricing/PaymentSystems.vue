@@ -28,8 +28,19 @@ const { t } = useI18N('pricing');
 
 <style lang="scss" module>
   .title {
-    margin: 81px 0 64px 0;
     text-align: center;
+
+    @media (min-width: 1024px) {
+      margin: 81px 0 64px 0;
+    }
+
+    @media (max-width: 1023px) and (min-width: 768px) {
+      margin: 64px 0 34px 0;
+    }
+
+    @media (max-width: 767px) {
+      margin: 81px 0 24px 0;
+    }
   }
 
   .list {
