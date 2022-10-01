@@ -1,0 +1,42 @@
+export default {
+  title: 'General Info',
+  email: 'Email',
+  password: 'Password',
+  activeSubscription: 'Active subscription',
+  change: 'Change',
+  renew: 'Renew the subscription',
+  logOut: 'Log Out',
+  expires: 'Subscription expires in',
+  day: 'day',
+  days: 'days',
+  enterCurrentPassword: {
+    title: 'Change Password',
+    caption: 'Enter your current password',
+  },
+  enterNewPassword: {
+    title: 'Change Password',
+  },
+  enterCodeFromEmail: {
+    title: 'Change Email',
+    caption: "We emailed you the code to change your login. Please check your inbox. Don't see it?",
+    resend: 'Resend code',
+  },
+  enterNewEmail: {
+    title: 'Change Email',
+    caption: 'Enter your new email',
+  },
+  form: {
+    email: 'Email',
+    emailType: 'Email is not a valid',
+    emailRequired: 'Email is required',
+    codeFormLetter: 'Code from letter',
+    codeRequired: 'Code is required',
+    password: 'Password',
+    passwordCaption: 'Password must contain numbers (0-9), Capital and uppercase Latin letters (A-z)',
+    newPassword: 'New Password',
+    repeatPassword: 'Repeat Password',
+    repeatPasswordError: 'Passwords do not match',
+    errorText: 'Incorect Email or Password',
+    button: 'Confirm',
+  },
+};

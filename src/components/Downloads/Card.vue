@@ -63,11 +63,18 @@ const props = defineProps<CardProps>();
     display: flex;
     flex-direction: column;
     max-width: 422px;
-    width: 100%;
     padding: 20px 32px 33px 32px;
     background: #fff;
     border: 1px solid rgba(0, 0, 0, 0.05);
     border-radius: 15px;
+    
+    @media (min-width: 768px) {
+      width: 50%;
+    }
+
+    @media (max-width: 767px) {
+      width: 100%;
+    }
   }
 
   .head {
@@ -110,11 +117,24 @@ const props = defineProps<CardProps>();
   .buttonsGroup {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+
+    @media (max-width: 1023px) {
+      flex-direction: column;
+    }
+
     gap: 8px;
   }
 
   .button {
-    width: 175px;
+
+    @media (min-width: 1024px) {
+      width: 175px;
+    }
+
+    @media (max-width: 1023px) {
+      width: 100% !important;
+    }
   }
 
   .space {

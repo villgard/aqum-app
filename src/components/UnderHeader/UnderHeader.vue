@@ -25,8 +25,21 @@ const props = withDefaults(defineProps<UnderHeaderProps>(), {
 
 .underHeader {
   position: relative;
-  min-height: 210px;
-  padding: 50px 0 56px 0;
+
+  @media (min-width: 1024px) {
+    min-height: 210px;
+    padding: 50px 0 56px 0;
+  }
+
+  @media (max-width: 1023px) and (min-width: 768px) {
+    min-height: 177px;
+    padding: 38px 0 56px 0;
+  }
+
+  @media (max-width: 767px) {
+    min-height: 135px;
+    padding: 28px 0 34px 0;
+  }
 
   &.withBackground {
     background-color: #F5F5F5;

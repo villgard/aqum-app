@@ -35,7 +35,13 @@ const current = computed(() => [
 .navigation {
   display: flex;
   justify-content: center;
-  margin: 20px 0 48px 0;
+  @media (min-width: 1024px) {
+    margin: 20px 0 48px 0;
+  }
+
+  @media (max-width: 1023px) {
+    margin: 20px 0 32px 0;
+  }
 }
 .list {
   position: relative;
@@ -43,6 +49,10 @@ const current = computed(() => [
   justify-content: center;
   border: none;
   color: rgba(89, 89, 89, 0.6);
+
+  @media (max-width: 767px) {
+    font-size: 12px !important;
+  }
 
   &::after {
     content: '';
@@ -56,6 +66,13 @@ const current = computed(() => [
   }
 
   :global {
+
+    .ant-menu-item {
+      @media (max-width: 767px) {
+        padding: 0 8px !important;
+      }
+    }
+
     .ant-menu-item-selected {
       color: #595959 !important;
 

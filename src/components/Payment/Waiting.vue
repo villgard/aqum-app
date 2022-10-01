@@ -1,15 +1,13 @@
 <template>
   <Container>
-    <a-row :class="$style.signUp" justify="center">
+    <a-row :class="$style.payment" justify="center">
       <Card
         titleAlign="center" 
         :title="t('title')"
-        :caption="t('caption', {
-          terms: '/terms',
-          privacy: '/privacy',
-        })">
+        :caption="t('caption')"
+      >
         <template #body>
-          <Form />
+          <ClockCircleOutlined :class="$style.icon"/>
         </template>
       </Card>
     </a-row>
@@ -19,14 +17,14 @@
 <script lang="ts" setup>
 import Container from '@/components/Common/Container.vue';
 import Card from '@/components/Card/Card.vue';
-import Form from './Form.vue';
+import { ClockCircleOutlined } from '@ant-design/icons-vue';
 import { useI18N } from '@/hooks/useI18N';
 
-const { t } = useI18N('auth.signUp');
+const { t } = useI18N('payment.waiting');
 </script>
 
 <style lang="scss" module>
-  .signUp {
+  .payment {
     @media (min-width: 1024px) {
       padding: 43px 0 88px 0;
     }
@@ -34,5 +32,12 @@ const { t } = useI18N('auth.signUp');
     @media (max-width: 1023px) {
       padding: 28px 0 64px 0;
     }
+  }
+
+  .icon {
+    display: block;
+    margin: 28px 0 0 0;
+    font-size: 54px;
+    color: #508FF8;
   }
 </style>

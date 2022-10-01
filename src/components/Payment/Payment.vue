@@ -1,13 +1,11 @@
 <template>
   <Container>
-    <a-row :class="$style.signUp" justify="center">
+    <a-row :class="$style.payment" justify="center">
       <Card
         titleAlign="center" 
         :title="t('title')"
-        :caption="t('caption', {
-          terms: '/terms',
-          privacy: '/privacy',
-        })">
+        :caption="t('caption')"
+      >
         <template #body>
           <Form />
         </template>
@@ -22,11 +20,11 @@ import Card from '@/components/Card/Card.vue';
 import Form from './Form.vue';
 import { useI18N } from '@/hooks/useI18N';
 
-const { t } = useI18N('auth.signUp');
+const { t } = useI18N('payment.payment');
 </script>
 
 <style lang="scss" module>
-  .signUp {
+  .payment {
     @media (min-width: 1024px) {
       padding: 43px 0 88px 0;
     }

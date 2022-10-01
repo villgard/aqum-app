@@ -8,6 +8,8 @@ import auth from './auth';
 import documents from './documents';
 import downloads from './downloads';
 import pricing from './pricing';
+import payment from './payment';
+import account from './account';
 
 export default {
   header,
@@ -19,5 +21,7 @@ export default {
   documents,
   downloads,
   pricing,
+  payment,
+  account,
   faq,
 };

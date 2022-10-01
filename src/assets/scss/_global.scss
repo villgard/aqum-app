@@ -38,7 +38,13 @@ ul, ol, dl {
 .text {
 
   h1 {
-    margin: 0 0 42px 0;
+    @media (min-width: 1024px) {
+      margin: 0 0 42px 0;
+    }
+
+    @media (max-width: 1023px) {
+      margin: 0 0 16px 0;
+    }
     text-align: center;
     @include h2;
     font-weight: 700;

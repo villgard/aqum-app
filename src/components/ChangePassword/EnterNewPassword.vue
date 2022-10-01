@@ -1,16 +1,16 @@
 <template>
   <a-form :class="$style.form" :model="formState" layout="vertical">
-    <a-form-item :label="t('form.password')" name="password" :rules="[{ required: true, validator: checkPassword, message: t('form.passwordCaption') }]">
+    <a-form-item :label="t('newPassword')" name="password" :rules="[{ required: true, validator: checkPassword, message: t('passwordCaption') }]">
       <a-input-password v-model:value="formState.password" />
     </a-form-item>
 
-    <a-form-item :label="t('form.repeatPassword')" name="repeatPassword" :rules="[{ required: true, validator: checkPassword, message: t('form.passwordCaption') }, { validator: isEqual, message: t('form.repeatPasswordError')}]">
+    <a-form-item :label="t('repeatPassword')" name="repeatPassword" :rules="[{ required: true, validator: checkPassword, message: t('passwordCaption') }, { validator: isEqual, message: t('repeatPasswordError')}]">
       <a-input-password v-model:value="formState.repeatPassword" />
     </a-form-item>
 
     <a-form-item>
       <a-button block type="primary" shape="round" size="large" html-type="submit">
-        {{ t("resetPassword.form.button") }}
+        {{ t("button") }}
       </a-button>
     </a-form-item>
   </a-form>
@@ -26,7 +26,7 @@ interface FormState {
   repeatPassword: string;
 };
 
-const { t } = useI18N('auth');
+const { t } = useI18N('account.form');
 const formState: UnwrapRef<FormState> = reactive({
   password: '',
   repeatPassword: '',
@@ -52,7 +52,6 @@ const isEqual = (_: any, value) => {
 <style lang="scss" module>
 .form {
   width: 100%;
-  
   @media (min-width: 1024px) {
     margin: 29px 0 -45px 0;
   }

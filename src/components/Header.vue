@@ -47,7 +47,8 @@ const { t } = useI18N('header');
 
 .header {
   height: 68px;
-  background: var(--white);
+  background: transparent !important;
+
   :global {
     .ant-menu {
       background: transparent;

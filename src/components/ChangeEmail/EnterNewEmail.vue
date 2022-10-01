@@ -1,12 +1,12 @@
 <template>
   <a-form :class="$style.form" :model="formState" layout="vertical">
-    <a-form-item :label="t('form.email')" name="email" :rules="[{ type: 'email', message: t('form.emailType') }, { required: true, message: t('form.emailRequired') }]">
+    <a-form-item :label="t('email')" name="email" :rules="[{ type: 'email', message: t('emailType') }, { required: true, message: t('emailRequired') }]">
       <a-input v-model:value="formState.email" />
     </a-form-item>
 
     <a-form-item>
       <a-button block type="primary" shape="round" size="large" html-type="submit">
-        {{ t("recoverPassword.form.button") }}
+        {{ t("button") }}
       </a-button>
     </a-form-item>
   </a-form>
@@ -21,7 +21,7 @@ interface FormState {
   email: string;
 };
 
-const { t } = useI18N('auth');
+const { t } = useI18N('account.form');
 const formState: UnwrapRef<FormState> = reactive({
   email: '',
 });

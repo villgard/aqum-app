@@ -33,8 +33,25 @@ const selected = ({ key }) => emit('select', key);
 
 .navigation {
   display: flex;
-  justify-content: center;
-  margin: 20px 0 98px 0;
+  @media (min-width: 1024px) {
+    justify-content: center;
+    margin: 20px 0 98px 0;
+  }
+
+  @media (max-width: 1023px) {
+    overflow-x: auto;
+  }
+
+  @media (max-width: 1023px) and (min-width: 768px) {
+    margin: 26px 0 46px 0;
+    padding: 0 24px 8px 24px;
+  }
+
+  @media (max-width: 767px) {
+    margin: 26px 0 32px 0;
+    padding: 0 16px 8px 16px;
+    font-size: 12px !important;
+  }
 }
 .list {
   position: relative;
@@ -55,6 +72,13 @@ const selected = ({ key }) => emit('select', key);
   }
 
   :global {
+
+    .ant-menu-item {
+      @media (max-width: 767px) {
+        padding: 0 16px !important;
+      }
+    }
+
     .ant-menu-item-selected {
       color: #595959 !important;
 
