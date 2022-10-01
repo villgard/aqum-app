@@ -139,4 +139,19 @@ const slides = computed(() => [
     }
   }
 }
+
+@media screen and (max-width: 475px) {
+  .slider {
+    margin-top: 61px;
+  }
+
+  .card {
+    .info {
+      padding: 29px;
+    }
+    .banner {
+      padding: 44px 34px;
+    }
+  }
+}
 </style>

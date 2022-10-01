@@ -62,16 +62,39 @@ const { t } = useI18N('home.features');
 
 @media screen and (max-width: 992px) {
   .features {
+    margin-bottom: 100px;
+
     .wrapper {
       .content {
+        max-width: 248px;
+        margin-right: 70px;
         :global {
           .ant-btn-round {
             padding: 7px 49px;
           }
         }
+        .subtitle {
+          margin-bottom: 234px;
+        }
       }
     }
   }
+}
 
+@media screen and (max-width: 475px) {
+  .features {
+    .wrapper {
+      padding: 80px 0 30px;
+      flex-direction: column;
+      align-items: flex-start;
+      .content {
+        max-width: 300px;
+        margin-right: 0;
+        .subtitle {
+          margin-bottom: 18px;
+        }
+      }
+    }
+  }
 }
 </style>
