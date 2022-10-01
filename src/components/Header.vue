@@ -47,10 +47,8 @@ const { t } = useI18N('header');
 
 .header {
   height: 68px;
-  background: var(--white);
-  &.half {
-    background: linear-gradient(to right, var(--white) 50%, transparent 50%);
-  }
+  background: transparent !important;
+
   :global {
     .ant-menu {
       background: transparent;

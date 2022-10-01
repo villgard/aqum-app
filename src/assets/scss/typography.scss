@@ -14,11 +14,24 @@
 }
 
 @mixin h1-sec {
-  @include t(34, 41, 700);
+  @media (min-width: 768px) {
+    @include t(34, 41, 700);
+  }
+
+  @media (max-width: 767px) {
+    @include t(24, 29, 700);
+  }
 }
 
 @mixin h2 {
-  @include t(34, 41, 500);
+  
+  @media (min-width: 1024px) {
+    @include t(34, 41, 500);
+  }
+
+  @media (max-width: 1023px) {
+    @include t(28, 34, 500);
+  }
 }
 
 @mixin h3 {
@@ -57,8 +70,15 @@
 
 @mixin price-title {
   font-weight: 500;
-  font-size: 24px;
-  line-height: 130%;
+  @media (min-width: 768px) {
+    font-size: 24px;
+    line-height: 130%;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 18px;
+    line-height: 22px;
+  }
 }
 
 @mixin price-text {
@@ -94,8 +114,16 @@
 
 @mixin terms-text {
   font-weight: 500;
-  font-size: 24px;
-  line-height: 24px;
+
+  @media (min-width: 768px) {
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 18px;
+    line-height: 22px;
+  }
 }
 
 @mixin footer-text {

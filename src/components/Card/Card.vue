@@ -28,8 +28,19 @@ const hasCaptionsSlot = computed<Boolean>(() => !!slots['caption']);
   border: 1px solid rgba(0, 0, 0, 0.05);
   border-radius: 15px;
 
+  @media (max-width: 767px) {
+    width: 100%;
+  }
+
   &.default {
-    padding: 36px 44px 63px 44px;
+
+    @media (min-width: 768px) {
+      padding: 36px 44px 63px 44px;
+    }
+
+    @media (max-width: 767px) {
+      padding: 28px 21px;
+    }
 
     @media (min-width: 768px) {
       width: 100%;
@@ -41,8 +52,17 @@ const hasCaptionsSlot = computed<Boolean>(() => !!slots['caption']);
 .title {
   margin: 0 0 13px 0;
   font-weight: 700;
-  font-size: 24px;
-  line-height: 29px;
+
+  @media (min-width: 768px) {
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
   color: #434343;
 
   &.center {
@@ -55,7 +75,9 @@ const hasCaptionsSlot = computed<Boolean>(() => !!slots['caption']);
 }
 
 .caption {
-  padding: 0 10px;
+  @media (min-width: 768px) {
+    padding: 0 10px;
+  }
   margin: 0 0 24px 0;
   color: #8C8C8C;
   text-align: center;

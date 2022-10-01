@@ -40,6 +40,17 @@ const { t } = useI18N('downloads');
     display: flex;
     justify-content: center;
     gap: 24px;
-    padding: 66px 0 24px 0;
+    
+    @media (min-width: 1024px) {
+      padding: 66px 0 24px 0;
+    }
+
+    @media (max-width: 1023px) {
+      padding: 38px 0 24px 0;
+    }
+
+    @media (max-width: 767px) {
+      flex-direction: column;
+    }
   }
 </style>

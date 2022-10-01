@@ -1076,7 +1076,12 @@
 }
 
 .ant-form-item-label > label {
-  font-size: 16px !important;
+  @media (min-width: 768px) {
+    font-size: 16px !important;
+  }
+  @media (max-width: 767px) {
+    font-size: 14px !important;
+  }
   color: #434343;
 }
 
@@ -1118,5 +1123,23 @@
   span {
     display: flex;
     align-items: center;
+  }
+}
+
+.ant-form-item .ant-form-item-label {
+  @media (max-width: 767px) {
+    padding: 0 0 4px 0 !important;
+  }
+}
+
+.ant-form-item {
+  @media (max-width: 767px) {
+    margin-bottom: 16px !important;
+  }
+}
+
+.ant-form-item-explain, .ant-form-item-extra {
+  @media (max-width: 767px) {
+    font-size: 12px !important;
   }
 }

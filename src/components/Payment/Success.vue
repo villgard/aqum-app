@@ -30,7 +30,13 @@ const { t } = useI18N('payment.success');
 
 <style lang="scss" module>
   .payment {
-    padding: 43px 0 88px 0;
+    @media (min-width: 1024px) {
+      padding: 43px 0 88px 0;
+    }
+
+    @media (max-width: 1023px) {
+      padding: 28px 0 64px 0;
+    }
   }
 
   .icon {

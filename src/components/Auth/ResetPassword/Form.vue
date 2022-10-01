@@ -52,7 +52,14 @@ const isEqual = (_: any, value) => {
 <style lang="scss" module>
 .form {
   width: 100%;
-  margin: 29px 0 -45px 0;
+  
+  @media (min-width: 1024px) {
+    margin: 29px 0 -45px 0;
+  }
+
+  @media (max-width: 1023px) {
+    margin: 26px 0 0 0;
+  }
 }
 
 .label {

@@ -64,7 +64,6 @@ const checkPassword = (_: any, value) => {
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 16px;
-  font-size: 16px;
 }
 
 .signUp {

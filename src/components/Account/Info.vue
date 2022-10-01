@@ -80,8 +80,15 @@ const { t } = useI18N('account');
 
   .title {
     font-weight: 500;
-    font-size: 24px;
-    line-height: 29px;
+    @media (min-width: 768px) {
+      font-size: 24px;
+      line-height: 29px;
+    }
+
+    @media (max-width: 767px) {
+      font-size: 18px;
+      line-height: 22px;
+    }
     color: #434343;
   }
 
