@@ -1,5 +1,5 @@
 <template>
-  <a-menu :selectedKeys="null" mode="horizontal" :class="$style.languageSelector">
+  <a-menu :selectedKeys="null" :mode="mode || 'inline'" :class="[$style.languageSelector, !mode && $style.fullSize]">
     <a-sub-menu>
       <template #title>
         {{ localeObject.label }}
@@ -16,6 +16,7 @@ import { localeObjects } from '@/utils';
 import { useI18N } from '@/hooks/useI18N';
 
 const { setLocale, localeObject } = useI18N();
+const props = defineProps(['mode']);
 
 function updateLanguage(key: string) {
   setLocale(key);
@@ -26,6 +27,9 @@ function updateLanguage(key: string) {
 .languageSelector {
   flex-shrink: 0;
   border: none !important;
-  width: 68px;
+
+  &:not(.fullSize) {
+    width: 68px;
+  }
 }
 </style>
