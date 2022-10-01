@@ -47,7 +47,7 @@ const routes: RouterRecordRaw[] = [
   {
     name: 'faq',
     path: '/faq',
-    component: () => import('@/views/index.vue'),
+    component: () => import('@/views/faq.vue'),
   },
   {
     name: 'support',

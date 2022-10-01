@@ -23,6 +23,7 @@ const { t } = useI18N('home.features');
 
 .features {
   margin-bottom: 120px;
+  padding: 0 15px;
   background: var(--gray-2);
   box-shadow: -15px 15px 30px rgba(0, 0, 0, 0.02);
 

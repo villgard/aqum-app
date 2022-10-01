@@ -1,7 +1,7 @@
 <template>
-  <Swiper :class="$style.swiper" :options="options" :modules="modules" @swiper="onSwiper" @slideChange="onSlideChange">
-    <SwiperSlide v-for="(item, index) in slides" :key="index">
-      <div :class="$style.card">
+  <div :class="$style.slider">
+    <div :class="$style.slide">
+      <div :class="$style.card" v-for="(item, index) in slides" :key="index">
         <div :class="$style.info">
           <div :class="$style.header">
             <h3 :class="$style.title">{{ t(`${index}.title`) }}</h3>
@@ -13,103 +13,95 @@
           <img :src="item.image" alt="" />
         </div>
       </div>
-    </SwiperSlide>
-    <div class="pagination"></div>
-  </Swiper>
+    </div>
+  </div>
 </template>
 
 <script lang="ts" setup>
-import { Swiper, SwiperSlide } from 'swiper/vue';
-import { Pagination, Swiper as SwiperClass, SwiperOptions } from 'swiper';
 import { computed, ref } from 'vue';
 import { useI18N } from '@/hooks/useI18N';
 
 const { t } = useI18N('home.features.slider');
 
-let swiper: SwiperClass = null;
-const modules = [Pagination];
-const index = ref<number>(0);
-
-const options: SwiperOptions = {
-  initialSlide: 1,
-  slidesPerView: 1,
-  slidesPerGroup: 2.5,
-  watchSlidesProgress: true,
-  grabCursor: true,
-  pagination: {
-    el: '.pagination',
-  },
-};
-
 const slides = computed(() => [
   {
     title: t('title'),
     subtitle: t('subtitle'),
-    image: '/src/assets/images/slide.webp',
+    image: '/src/assets/images/slide.png',
   },
   {
     title: t('title'),
     subtitle: t('subtitle'),
-    image: '/src/assets/images/slide.webp',
+    image: '/src/assets/images/slide.png',
   },
   {
     title: t('title'),
     subtitle: t('subtitle'),
-    image: '/src/assets/images/slide.webp',
+    image: '/src/assets/images/slide.png',
   },
   {
     title: t('title'),
     subtitle: t('subtitle'),
-    image: '/src/assets/images/slide.webp',
+    image: '/src/assets/images/slide.png',
   },
   {
     title: t('title'),
     subtitle: t('subtitle'),
-    image: '/src/assets/images/slide.webp',
+    image: '/src/assets/images/slide.png',
   },
   {
     title: t('title'),
     subtitle: t('subtitle'),
-    image: '/src/assets/images/slide.webp',
+    image: '/src/assets/images/slide.png',
   },
 ]);
 
-function onSwiper(swiperInstance: SwiperClass) {
-  swiper = swiperInstance;
-}
-
-function onSlideChange() {
-  index.value = swiper.activeIndex;
-}
 </script>
 
 <style lang="scss" module>
 @import '@/assets/scss/utils.scss';
 
-.swiper {
-  padding: 41px 0;
-  overflow: hidden;
-  margin: auto;
-  :global {
-    .swiper-wrapper {
-      display: flex;
-      justify-content: space-between;
-      max-width: 2362px;
-    }
+.slider {
+  position: relative;
+  width: calc(100% + 70px);
+  height: 484px;
+  margin: 0 -35px;
+  padding-bottom: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: normal;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  &::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
   }
+}
+
+.slide {
+  width: 2362px;
+  padding: 0 35px;
+  display: flex;
+  position: absolute;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 .card {
   width: 372px;
   height: 464px;
   display: block;
-  border-radius: 15px;
+  border-radius: 15px !important;
   margin-right: 26px;
   overflow: hidden;
   border: 1px solid rgba(67, 67, 67, 0.05);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
   .info {
     padding: 32px;
-
+    border-radius: 15px 15px 0 0;
     background: var(--white);
   }
   .header {
@@ -142,6 +134,8 @@ function onSlideChange() {
     img {
       width: 298px;
       height: auto;
+      filter: drop-shadow(0px 15px 30px rgba(0, 0, 0, 0.15));
+      border-radius: 15px;
     }
   }
 }
