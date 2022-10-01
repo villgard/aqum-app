@@ -74,6 +74,10 @@ const selected = ({ key }) => emit('select', key);
   :global {
 
     .ant-menu-item {
+      @media (max-width: 1023px) and (min-width: 768px) {
+        padding: 0 40px !important;
+      }
+
       @media (max-width: 767px) {
         padding: 0 16px !important;
       }

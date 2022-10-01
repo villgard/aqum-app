@@ -1,14 +1,14 @@
 <template>
   <a-layout-footer>
     <Container>
-      <a-row>
-        <a-col :span="6">
+      <a-row :class="$style.row">
+        <a-col :span="6" :class="$style.column">
           <Logo />
           <div :class="$style.text">
             {{ t('text') }}
           </div>
         </a-col>
-        <a-col :span="18">
+        <a-col :span="18" :class="$style.column">
           <a-row justify="end">
             <FooterMenu />
           </a-row>
@@ -44,10 +44,22 @@ const { t } = useI18N('footer');
   margin: 20px 0;
   background: rgba(67, 67, 67, 0.15);
 }
-
 .copyright {
   padding: 0 0 40px 0;
   font-size: 12px;
   color: rgba(67, 67, 67, 0.4);
+}
+
+@media (max-width: 767px) {
+  .row {
+    margin: 0 !important;
+    flex-direction: column !important;
+  }
+
+  .column {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex-basis: 0 0 100% !important;
+  }
 }
 </style>

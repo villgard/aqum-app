@@ -68,8 +68,12 @@ const current = computed(() => [
   :global {
 
     .ant-menu-item {
+      @media (max-width: 1023px) and (min-width: 768px) {
+        padding: 0 40px !important;
+      }
+
       @media (max-width: 767px) {
-        padding: 0 8px !important;
+        padding: 0 16px !important;
       }
     }
 

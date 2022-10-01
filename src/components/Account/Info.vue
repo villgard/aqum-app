@@ -72,10 +72,17 @@ const { t } = useI18N('account');
     flex-direction: column;
     width: 100%;
     height: 100%;
-    padding: 32px 32px 40px 32px;
     background: #fff;
     border: 1px solid rgba(0, 0, 0, 0.05);
     border-radius: 15px;
+
+    @media (min-width: 768px) {
+      padding: 32px 32px 40px 32px;
+    }
+
+    @media (max-width: 767px) {
+      padding: 22px;
+    }
   }
 
   .title {
@@ -101,6 +108,10 @@ const { t } = useI18N('account');
     font-size: 16px;
     line-height: 24px;
     color: #434343;
+
+    @media (max-width: 767px) {
+      margin-bottom: 64px;
+    }
   }
 
   .field {
@@ -124,24 +135,43 @@ const { t } = useI18N('account');
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 0 16px;
     font-weight: 500;
-    font-size: 18px;
-    line-height: 24px;
     color: #595959;
+    
+    @media (min-width: 768px) {
+      gap: 0 16px;
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    @media (max-width: 767px) {
+      gap: 0 8px;
+      font-size: 16px;
+      line-height: 24px;
+    }
   }
 
   .subscribtionInfo {
     display: flex;
     flex-direction: column;
-    gap: 4px 0;
+    @media (min-width: 768px) {
+      gap: 4px 0;
+    }
   }
 
   .subscribtionLabel {
     font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
     color: #434343;
+    
+    @media (min-width: 768px) {
+      font-size: 16px;
+      line-height: 22px;
+    }
+
+    @media (max-width: 767px) {
+      font-size: 14px;
+      line-height: 19px;
+    }
   }
 
   .footer {
