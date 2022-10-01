@@ -2,7 +2,7 @@
   <ul class="footer__content-list">
     <li class="footer__content-list--title">{{ title }}</li>
     <li v-for="item in list" :id="item.label" class="footer__content-list--item">
-      <RouterLink :to="{ name: item.to }"  class="footer__content-list--link">{{ item.label }}</RouterLink>
+      <RouterLink :to="item.to"  class="footer__content-list--link">{{ item.label }}</RouterLink>
     </li>
   </ul>
 </template>
@@ -17,7 +17,7 @@ defineProps({
 </script>
 
 <style lang="scss">
-@import "/src/assets/scss/utils.scss";
+@import "@/assets/scss/typography.scss";
 
 .footer__content-list {
   list-style: none;

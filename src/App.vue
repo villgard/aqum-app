@@ -36,8 +36,9 @@ function getVisualViewportHeight() {
   --font: 'Gotham', sans-serif;
 }
 
-html {
-  font: 16px/1.3 var(--font);
+html,
+body {
+  font: 16px/1.3 var(--font) !important;
 }
 
 main {
@@ -50,6 +51,6 @@ main {
 </style>
 
 <style lang="less">
-  @import 'ant-design-vue/dist/antd.less';
-  @import '@/assets/scss/antd.less';
+@import 'ant-design-vue/dist/antd.less';
+@import '@/assets/scss/antd.less';
 </style>

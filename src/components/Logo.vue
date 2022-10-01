@@ -1,5 +1,5 @@
 <template>
-  <RouterLink :to="{ name: 'index' }" class="logo">
+  <RouterLink :to="'/'" class="logo">
     <img src="/src/assets/images/aqum-logo.svg" alt="AQUM">
   </RouterLink>
 </template>
