@@ -28,13 +28,13 @@
 </template>
 
 <script setup>
+import { useRoute } from 'vue-router';
+import { computed } from 'vue';
 import Container from '@/components/Common/Container.vue';
 import Logo from '@/components/Logo.vue';
 import Menu from '@/components/Menu.vue';
 import LanguageSelector from '@/components/LanguageSelector.vue';
 import { useI18N } from '@/hooks/useI18N';
-import { useRoute } from 'vue-router';
-import { computed } from 'vue';
 
 const route = useRoute();
 const isMainPage = computed(() => route.name === 'index');
@@ -43,7 +43,7 @@ const { t } = useI18N('header');
 </script>
 
 <style lang="scss" module>
-@import 'src/assets/scss/utils.scss';
+@import '@/assets/scss/typography.scss';
 
 .header {
   height: 68px;

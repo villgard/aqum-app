@@ -93,6 +93,6 @@ main {
 </style>
 
 <style lang="less">
-  @import 'ant-design-vue/dist/antd.less';
-  @import '@/assets/scss/antd.less';
+@import 'ant-design-vue/dist/antd.less';
+@import '@/assets/scss/antd.less';
 </style>

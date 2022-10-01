@@ -1,5 +1,5 @@
 <template>
-  <UnderHeader :title="t('underHeader.title')" :caption="t('underHeader.caption')"/>
+  <UnderHeader :title="t('underHeader.title')" :caption="t('underHeader.caption')" />
   <Container>
     <Downloads />
   </Container>

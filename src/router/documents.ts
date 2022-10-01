@@ -9,7 +9,7 @@ const DocumentsRoutes: RouteRecordRaw = {
   children: [
     {
       name: 'termsOfService',
-      path: '',
+      path: 'terms-of-service',
       component: () => import('@/views/documents/termsOfService.vue'),
     },
     {

@@ -27,6 +27,38 @@ export default {
     subtitle:
       'Velit euismod in pellentesque massa placerat duis ultricies lacus. Nisl condimentum id venenatis a condimentum vitae. Posuere urna nec tincidunt praesent. At in tellus integer feugiat. Velit euismod in pellentesque massa placerat duis ultricies lacus. Nisl condimentum id venenatis a condimentum vitae. Posuere urna nec tincidunt',
   },
+  features: {
+    title: 'Our Features',
+    subtitle:
+      'Sed ut perspiciatis unde omnis iste natus error sit voluptatesantium doloremque laudantium, totam rem aperiam, eaque ipsa',
+    button: 'Join Now',
+    slider: {
+      0: {
+        title: 'Drag&Drop cookies',
+        text: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatesantium doloremque laudantium, totam rem aperiam, eaque ipsavoluptatesantium doloremque',
+      },
+      1: {
+        title: 'Drag&Drop cookies',
+        text: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatesantium doloremque laudantium, totam rem aperiam, eaque ipsavoluptatesantium doloremque',
+      },
+      2: {
+        title: 'Drag&Drop cookies',
+        text: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatesantium doloremque laudantium, totam rem aperiam, eaque ipsavoluptatesantium doloremque',
+      },
+      3: {
+        title: 'Drag&Drop cookies',
+        text: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatesantium doloremque laudantium, totam rem aperiam, eaque ipsavoluptatesantium doloremque',
+      },
+      4: {
+        title: 'Drag&Drop cookies',
+        text: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatesantium doloremque laudantium, totam rem aperiam, eaque ipsavoluptatesantium doloremque',
+      },
+      5: {
+        title: 'Drag&Drop cookies',
+        text: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatesantium doloremque laudantium, totam rem aperiam, eaque ipsavoluptatesantium doloremque',
+      },
+    },
+  },
   opportunities: {
     title: 'Use every opportunity to',
     subtitle: 'Sed ut perspiciatis unde omnis iste natus error sit ',

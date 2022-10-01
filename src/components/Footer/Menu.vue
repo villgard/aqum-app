@@ -25,53 +25,53 @@ const lists = computed(
     product: [
       {
         label: t('list.product.pricing'),
-        to: 'index',
+        to: '/pricing',
       },
       {
         label: t('list.product.download'),
-        to: 'index',
+        to: '/downloads',
       },
     ],
     reference: [
       {
         label: t('list.reference.support'),
-        to: 'index',
+        to: '/',
       },
       {
         label: t('list.reference.api'),
-        to: 'index',
+        to: '/',
       },
       {
         label: t('list.reference.help'),
-        to: 'index',
+        to: '/',
       },
     ],
     download: [
       {
         label: t('list.download.win'),
-        to: 'index',
+        to: '/downloads',
       },
       {
         label: t('list.download.mac'),
-        to: 'index',
+        to: '/downloads',
       },
       {
         label: t('list.download.macM'),
-        to: 'index',
+        to: '/downloads',
       },
     ],
     legal: [
       {
         label: t('list.legal.terms'),
-        to: 'termsOfService',
+        to: '/documents/terms-of-service',
       },
       {
         label: t('list.legal.agree'),
-        to: 'userAgreement',
+        to: '/documents/user-agreement',
       },
       {
         label: t('list.legal.privacy'),
-        to: 'privacyPolicy',
+        to: '/documents/privacy-policy',
       },
     ],
   }),

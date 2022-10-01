@@ -14,7 +14,7 @@ const { t } = useI18N('documents');
 const navigation = computed(() => [
   {
     label: t('navigation.0'),
-    to: '/documents',
+    to: '/documents/terms-of-service',
   },
   {
     label: t('navigation.1'),
