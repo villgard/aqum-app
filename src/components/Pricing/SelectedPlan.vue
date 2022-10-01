@@ -69,7 +69,18 @@ import IconCheck from '@/components/Icons/Check.vue';
 
   .wrapper {
     width: 100%;
-    padding: 32px 32px 40px 32px;
+    @media (min-width: 1024px) {
+      padding: 32px 32px 40px 32px;
+    }
+
+    @media (max-width: 1023px) and (min-width: 768px) {
+      padding: 22px;
+    }
+
+    @media (max-width: 767px) {
+      padding: 22px;
+    }
+
     background: #fff;
     border: 1px solid rgba(0, 0, 0, 0.05);
     border-radius: 15px;
